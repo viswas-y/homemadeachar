@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+    <defs>
+      <linearGradient id="bg-packing-jars.svg" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#1E392B"/>
+        <stop offset="100%" stop-color="#141E18"/>
+      </linearGradient>
+    </defs>
+    <rect width="800" height="600" fill="url(#bg-packing-jars.svg)"/>
+    
+    <!-- Warm textured grid overlay -->
+    <circle cx="700" cy="100" r="250" fill="#FFFFFF" opacity="0.04"/>
+    <circle cx="100" cy="500" r="200" fill="#FFFFFF" opacity="0.04"/>
+    
+    <!-- Kitchen Illustration Badge -->
+    <g transform="translate(400, 240)">
+      <circle cx="0" cy="0" r="100" fill="#FFFFFF" opacity="0.12"/>
+      <circle cx="0" cy="0" r="85" fill="#FAF6EE" stroke="#E5A93C" stroke-width="4"/>
+      <text x="0" y="24" font-size="70" text-anchor="middle">✨</text>
+    </g>
+
+    <!-- Text Captions -->
+    <text x="400" y="410" font-family="'Baloo Chettan 2', sans-serif" font-size="34" font-weight="800" fill="#FAF6EE" text-anchor="middle">Meticulous Hand-packing</text>
+    <text x="400" y="450" font-family="'Nunito', sans-serif" font-size="18" font-weight="700" fill="#FDE68A" text-anchor="middle">Layered with spiced oil for natural preservation</text>
+    <text x="400" y="490" font-family="'Nunito', sans-serif" font-size="15" font-weight="400" fill="#E2E8F0" text-anchor="middle">Zero chemical stabilizers. Every jar is filled and weighed by Amma.</text>
+    
+    <!-- Handcrafted stamp -->
+    <rect x="50" y="50" width="180" height="36" rx="18" fill="#FAF6EE" opacity="0.2"/>
+    <text x="140" y="73" font-family="'Nunito', sans-serif" font-size="12" font-weight="800" letter-spacing="2" fill="#FAF6EE" text-anchor="middle">KITCHEN PROCESS</text>
+  </svg>

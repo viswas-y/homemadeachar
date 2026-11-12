@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" rx="24" fill="#1E392B"/>
+  <!-- Mini Bharani / Chilli -->
+  <ellipse cx="50" cy="55" rx="28" ry="32" fill="#DC2626"/>
+  <rect x="36" y="24" width="28" height="14" rx="3" fill="#FAF6EE"/>
+  <ellipse cx="50" cy="22" rx="20" ry="7" fill="#B91C1C"/>
+  <circle cx="50" cy="55" r="8" fill="#FBBF24"/>
+</svg>
