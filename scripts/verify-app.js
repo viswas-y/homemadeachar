@@ -96,20 +96,22 @@ assert.strictEqual(schema.brand.name, SHOP_CONFIG.name, 'Brand matches shop name
 assert.ok(schema.offers.lowPrice > 0, 'Offers lowPrice is present');
 console.log('   ✅ JSON-LD schema builder verified.');
 
-// 7. Verify Showcase Section Assets
-console.log('\n7️⃣ Checking Showcase Section Photography...');
-const sectionAssets = [
+// 7. Verify Showcase Section, Gallery & Story Assets
+console.log('\n7️⃣ Checking Showcase Section, Gallery & Story Photography...');
+const extraAssets = [
+  '/images/about-story.jpg',
   '/images/sections/ingredient-mangoes.jpg',
   '/images/sections/ingredient-spices.jpg',
   '/images/sections/ingredient-curry-leaves.jpg',
   '/images/sections/spotlight-flatlay.jpg',
-  '/images/sections/spotlight-bowl.jpg'
+  '/images/sections/spotlight-bowl.jpg',
+  ...GALLERY_ITEMS.map((item) => item.image)
 ];
-sectionAssets.forEach(imgPath => {
+extraAssets.forEach(imgPath => {
   const fullPath = path.join(process.cwd(), 'public', imgPath);
   assert.ok(fs.existsSync(fullPath), `Section asset exists on disk: ${imgPath}`);
   assert.ok(fs.statSync(fullPath).size > 10000, `Section asset is valid photo: ${imgPath}`);
 });
-console.log('   ✅ All 5 showcase section photos verified.');
+console.log('   ✅ All showcase section, gallery, and story photos verified.');
 
 console.log('\n🎉 ALL CHECKS PASSED SUCCESSFULLY! The application is production-ready with real photography.\n');

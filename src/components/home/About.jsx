@@ -8,13 +8,14 @@ export default function About() {
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
           
-          {/* Left Column: Amma Portrait */}
+          {/* Left Column: Amma Story Artwork */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="w-full max-w-sm aspect-[4/5] rounded-3xl overflow-hidden bg-white shadow-sm border-2 border-white/60 p-3 flex flex-col justify-end">
+            <div className="w-full max-w-sm aspect-[4/5] rounded-3xl overflow-hidden bg-white shadow-md border-2 border-white/60">
               <img
-                src="/images/about-amma.svg"
-                alt={`${SHOP_CONFIG.makerName} — ${SHOP_CONFIG.name}`}
-                className="w-full h-full object-contain"
+                src="/images/about-story.jpg"
+                alt={`Handmade by Amma, bottled with love — ${SHOP_CONFIG.name}`}
+                loading="lazy"
+                className="w-full h-full object-cover"
               />
             </div>
           </div>

@@ -27,7 +27,7 @@ export default function Gallery() {
               onClick={() => setSelectedPhotoIndex(index)}
               className="bg-[#FBF8F1] rounded-2xl overflow-hidden cursor-pointer group hover:-translate-y-1 transition-all duration-200 border border-black/5 p-2.5 sm:p-3 flex flex-col"
             >
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-stone-200">
+              <div className="relative aspect-square w-full overflow-hidden rounded-xl bg-stone-200">
                 <img
                   src={item.image}
                   alt={item.title}
