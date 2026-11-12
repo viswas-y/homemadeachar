@@ -90,16 +90,16 @@ export default function Carousel({ products = [] }) {
       role="region"
       aria-roledescription="carousel"
       aria-label="The Spice Jar featured pickles carousel"
-      className="w-full max-w-[148px] sm:max-w-[260px] lg:max-w-[300px] mx-auto flex flex-col items-center"
+      className="w-full max-w-[175px] sm:max-w-[260px] lg:max-w-[300px] mx-auto flex flex-col items-center"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       onFocus={() => setIsPaused(true)}
       onBlur={() => setIsPaused(false)}
       onKeyDown={handleKeyDown}
     >
-      {/* Framed Rounded Poster Card Stage */}
+      {/* Framed Vertical Portrait Poster Card Stage */}
       <div
-        className="relative w-full aspect-square sm:aspect-[4/4.4] rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg border-2 border-white/50 bg-white"
+        className="relative w-full aspect-[3/4] sm:aspect-[4/5] rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg border-2 border-white/50 bg-white"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
@@ -158,7 +158,7 @@ export default function Carousel({ products = [] }) {
       </div>
 
       {/* Controls Row Below Card: Dots + Active Product Price Pill */}
-      <div className="mt-1.5 sm:mt-2.5 flex flex-col items-center gap-1 sm:gap-2 w-full">
+      <div className="mt-2.5 sm:mt-3 flex flex-col items-center gap-2 sm:gap-2.5 w-full">
         {activeSlides.length > 1 && (
           <div className="flex items-center justify-center gap-1.5" role="tablist" aria-label="Choose a featured pickle">
             {activeSlides.map((slide, idx) => {
@@ -184,7 +184,7 @@ export default function Carousel({ products = [] }) {
 
         <Link
           to={`/product/${currentSlide.slug}`}
-          className="bg-white hover:bg-[#EDF5EE] text-[#1C1917] rounded-full px-2.5 py-0.5 sm:px-3.5 sm:py-1 inline-flex items-center gap-1 sm:gap-1.5 text-[9.5px] sm:text-[11px] font-bold shadow-sm transition border border-black/5"
+          className="bg-white hover:bg-[#EDF5EE] text-[#1C1917] rounded-full px-3 py-1 sm:px-4 sm:py-1.5 inline-flex items-center gap-1.5 text-[10px] sm:text-xs font-bold shadow-sm transition border border-black/5 whitespace-nowrap w-max"
         >
           <span>{currentSlide.name}</span>
           <span className="text-[#146B2E]">•</span>

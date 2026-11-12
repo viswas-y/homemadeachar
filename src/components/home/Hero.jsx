@@ -15,14 +15,14 @@ export default function Hero() {
       className="px-2.5 sm:px-6 lg:px-8 pt-1.5 sm:pt-3"
     >
       <div
-        className="max-w-6xl mx-auto rounded-[20px] sm:rounded-[28px] bg-[#0E7124] px-3.5 py-3 sm:px-7 sm:py-6 lg:px-10 lg:py-8 relative overflow-hidden shadow-sm border border-[#0B5A1C]"
+        className="max-w-6xl mx-auto rounded-[22px] sm:rounded-[30px] bg-[#0E7124] px-4 py-5 sm:px-8 sm:py-7 lg:px-10 lg:py-9 relative overflow-hidden shadow-sm border border-[#0B5A1C]"
         style={{
           backgroundImage:
             'linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px)',
           backgroundSize: '40px 40px',
         }}
       >
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-2.5 sm:gap-5 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 lg:gap-8 items-center">
 
           {/* Left Column: Crisp Bold Headline, Subhead & Pill CTA */}
           <div className="lg:col-span-6 space-y-1 sm:space-y-2.5 text-left z-10">
