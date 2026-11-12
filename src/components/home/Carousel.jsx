@@ -90,7 +90,7 @@ export default function Carousel({ products = [] }) {
       role="region"
       aria-roledescription="carousel"
       aria-label="Featured homemade achar carousel"
-      className="w-full max-w-md mx-auto flex flex-col items-center"
+      className="w-full max-w-[235px] sm:max-w-sm lg:max-w-md mx-auto flex flex-col items-center"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       onFocus={() => setIsPaused(true)}
@@ -99,7 +99,7 @@ export default function Carousel({ products = [] }) {
     >
       {/* Framed Rounded Card Stage */}
       <div
-        className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden shadow-md border-2 border-white/50 bg-[#FBF8F1]"
+        className="relative w-full aspect-[4/4.2] sm:aspect-[4/5] rounded-2xl sm:rounded-3xl overflow-hidden shadow-md border-2 border-white/50 bg-[#FBF8F1]"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
@@ -141,24 +141,24 @@ export default function Carousel({ products = [] }) {
               type="button"
               onClick={goPrev}
               aria-label="Previous pickle slide"
-              className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-[#221610] shadow-md flex items-center justify-center transition active:scale-95 z-10"
+              className="absolute left-2 sm:left-3 top-1/2 -translate-y-1/2 w-7 h-7 sm:w-9 sm:h-9 rounded-full bg-white/90 hover:bg-white text-[#221610] shadow-md flex items-center justify-center transition active:scale-95 z-10"
             >
-              <ChevronLeft className="w-5 h-5" />
+              <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
             <button
               type="button"
               onClick={goNext}
               aria-label="Next pickle slide"
-              className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 hover:bg-white text-[#221610] shadow-md flex items-center justify-center transition active:scale-95 z-10"
+              className="absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 w-7 h-7 sm:w-9 sm:h-9 rounded-full bg-white/90 hover:bg-white text-[#221610] shadow-md flex items-center justify-center transition active:scale-95 z-10"
             >
-              <ChevronRight className="w-5 h-5" />
+              <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
           </>
         )}
       </div>
 
       {/* Controls Row Below Card: Dots + Active Product Info Pill */}
-      <div className="mt-3.5 flex flex-col items-center gap-2.5 w-full">
+      <div className="mt-2.5 sm:mt-3.5 flex flex-col items-center gap-2 sm:gap-2.5 w-full">
         {activeSlides.length > 1 && (
           <div className="flex items-center justify-center gap-1.5" role="tablist" aria-label="Choose a featured pickle">
             {activeSlides.map((slide, idx) => {
@@ -171,10 +171,10 @@ export default function Carousel({ products = [] }) {
                   aria-selected={isActive}
                   aria-label={`Show ${slide.name} (${idx + 1} of ${activeSlides.length})`}
                   onClick={() => setCurrentIndex(idx)}
-                  className={`h-2 rounded-full transition-all ${
+                  className={`h-1.5 sm:h-2 rounded-full transition-all ${
                     isActive
-                      ? 'w-6 bg-[#221610]'
-                      : 'w-2 bg-[#221610]/25 hover:bg-[#221610]/50'
+                      ? 'w-5 sm:w-6 bg-[#221610]'
+                      : 'w-1.5 sm:w-2 bg-[#221610]/25 hover:bg-[#221610]/50'
                   }`}
                 />
               );
@@ -184,12 +184,12 @@ export default function Carousel({ products = [] }) {
 
         <Link
           to={`/product/${currentSlide.slug}`}
-          className="bg-white/75 hover:bg-white text-[#221610] rounded-full px-4 py-1.5 inline-flex items-center gap-2 text-xs font-bold shadow-xs transition border border-black/5"
+          className="bg-white/75 hover:bg-white text-[#221610] rounded-full px-3 py-1 sm:px-4 sm:py-1.5 inline-flex items-center gap-1.5 sm:gap-2 text-[11px] sm:text-xs font-bold shadow-xs transition border border-black/5"
         >
           <span>{currentSlide.name}</span>
           <span className="text-[#221610]/50">•</span>
           <span>From {formatINR(currentSlide.sizes[0].price)}</span>
-          <ArrowRight className="w-3.5 h-3.5" />
+          <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
         </Link>
       </div>
     </div>
