@@ -9,13 +9,13 @@
   }
 
   body {
-    background-color: #FBF8F1;
-    color: #221610;
+    background-color: #F7F7F5;
+    color: #1C1917;
   }
 
   /* Thin focus ring */
   *:focus-visible {
-    @apply outline-none ring-2 ring-[#221610] ring-offset-2;
+    @apply outline-none ring-2 ring-[#146B2E] ring-offset-2;
   }
 }
 

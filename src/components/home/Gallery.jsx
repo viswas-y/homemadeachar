@@ -11,10 +11,10 @@ export default function Gallery() {
         
         {/* Section Header */}
         <div className="mb-6 sm:mb-8 text-center sm:text-left">
-          <p className="text-[11px] sm:text-xs uppercase tracking-widest font-extrabold text-[#221610]/60">
+          <p className="text-[11px] sm:text-xs uppercase tracking-widest font-extrabold text-[#146B2E]">
             HOW WE MAKE IT
           </p>
-          <h2 className="font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-[#221610] uppercase mt-0.5">
+          <h2 className="font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-[#1C1917] uppercase mt-0.5">
             FROM OUR KITCHEN
           </h2>
         </div>
@@ -25,7 +25,7 @@ export default function Gallery() {
             <div
               key={item.id}
               onClick={() => setSelectedPhotoIndex(index)}
-              className="bg-[#FBF8F1] rounded-2xl overflow-hidden cursor-pointer group hover:-translate-y-1 transition-all duration-200 border border-black/5 p-2.5 sm:p-3 flex flex-col"
+              className="bg-[#F7F7F5] rounded-2xl overflow-hidden cursor-pointer group hover:-translate-y-1 transition-all duration-200 border border-stone-200/80 hover:border-[#146B2E]/35 p-2.5 sm:p-3 flex flex-col"
             >
               <div className="relative aspect-square w-full overflow-hidden rounded-xl bg-stone-200">
                 <img
@@ -36,12 +36,12 @@ export default function Gallery() {
                 />
               </div>
 
-              <div className="pt-2.5 sm:pt-3 text-[#221610] flex-1 flex flex-col justify-between">
+              <div className="pt-2.5 sm:pt-3 text-[#1C1917] flex-1 flex flex-col justify-between">
                 <div>
-                  <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#221610]/50 block">
+                  <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#1C1917]/50 block">
                     {item.step}
                   </span>
-                  <h3 className="font-display text-xs sm:text-sm font-bold text-[#221610] mt-0.5 truncate">
+                  <h3 className="font-display text-xs sm:text-sm font-bold text-[#1C1917] mt-0.5 truncate">
                     {item.title}
                   </h3>
                 </div>

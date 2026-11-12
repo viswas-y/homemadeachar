@@ -18,13 +18,13 @@ export default function CartItem({ item, onUpdateQuantity, onRemove }) {
 
       {/* Item Info */}
       <div className="flex-1 min-w-0">
-        <span className="text-[10px] font-extrabold text-[#221610]/50 uppercase tracking-wider block">
+        <span className="text-[10px] font-extrabold text-[#1C1917]/50 uppercase tracking-wider block">
           {item.size}
         </span>
-        <h4 className="font-display font-bold text-sm text-[#221610] truncate">
+        <h4 className="font-display font-bold text-sm text-[#1C1917] truncate">
           {item.name}
         </h4>
-        <div className="text-xs text-[#221610]/70 font-semibold mt-0.5">
+        <div className="text-xs text-[#1C1917]/70 font-semibold mt-0.5">
           {formatINR(item.price)} each
         </div>
 
@@ -35,18 +35,18 @@ export default function CartItem({ item, onUpdateQuantity, onRemove }) {
               type="button"
               onClick={() => onUpdateQuantity(item.cartItemId, item.quantity - 1)}
               aria-label={`Decrease quantity of ${item.name}`}
-              className="p-1 hover:bg-stone-100 rounded-full text-[#221610] transition-colors"
+              className="p-1 hover:bg-stone-100 rounded-full text-[#1C1917] transition-colors"
             >
               <Minus className="w-3 h-3" />
             </button>
-            <span className="w-6 text-center text-xs font-extrabold text-[#221610]">
+            <span className="w-6 text-center text-xs font-extrabold text-[#1C1917]">
               {item.quantity}
             </span>
             <button
               type="button"
               onClick={() => onUpdateQuantity(item.cartItemId, item.quantity + 1)}
               aria-label={`Increase quantity of ${item.name}`}
-              className="p-1 hover:bg-stone-100 rounded-full text-[#221610] transition-colors"
+              className="p-1 hover:bg-stone-100 rounded-full text-[#1C1917] transition-colors"
             >
               <Plus className="w-3 h-3" />
             </button>
@@ -56,7 +56,7 @@ export default function CartItem({ item, onUpdateQuantity, onRemove }) {
             type="button"
             onClick={() => onRemove(item.cartItemId)}
             aria-label={`Remove ${item.name} from cart`}
-            className="p-1 text-[#221610]/40 hover:text-[#221610] transition-colors ml-1"
+            className="p-1 text-[#1C1917]/40 hover:text-[#1C1917] transition-colors ml-1"
           >
             <Trash2 className="w-3.5 h-3.5" />
           </button>
@@ -65,7 +65,7 @@ export default function CartItem({ item, onUpdateQuantity, onRemove }) {
 
       {/* Line Total */}
       <div className="text-right flex-shrink-0">
-        <span className="font-display font-extrabold text-sm text-[#221610] block">
+        <span className="font-display font-extrabold text-sm text-[#1C1917] block">
           {formatINR(lineTotal)}
         </span>
       </div>

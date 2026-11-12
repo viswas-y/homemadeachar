@@ -1,5 +1,5 @@
 /**
- * Product catalog for Home Made Achar.
+ * Product catalog for The Spice Jar.
  * Real authentic Kerala pickles formatted with card colors, tags, and pricing.
  */
 

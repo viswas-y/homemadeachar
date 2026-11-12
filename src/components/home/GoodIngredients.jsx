@@ -36,7 +36,7 @@ function InkTicks({ position }) {
       <svg
         viewBox="0 0 36 36"
         aria-hidden="true"
-        className="w-7 h-7 text-[#221610] absolute -top-1 right-3 sm:right-2 pointer-events-none"
+        className="w-7 h-7 text-[#146B2E] absolute -top-1 right-3 sm:right-2 pointer-events-none"
       >
         <path
           d="M8 22 L15 10 M16 25 L26 17 M19 30 L30 28"
@@ -53,7 +53,7 @@ function InkTicks({ position }) {
     <svg
       viewBox="0 0 36 36"
       aria-hidden="true"
-      className="w-7 h-7 text-[#221610] absolute bottom-1 right-3 sm:right-2 pointer-events-none"
+      className="w-7 h-7 text-[#146B2E] absolute bottom-1 right-3 sm:right-2 pointer-events-none"
     >
       <path
         d="M8 8 L17 15 M12 18 L24 21 M14 27 L25 32"
@@ -74,28 +74,29 @@ export default function GoodIngredients() {
 
   return (
     <section
+      id="ingredients"
       aria-labelledby="good-ingredients-heading"
-      className="py-10 sm:py-16 px-4 sm:px-8 max-w-7xl mx-auto w-full"
+      className="py-12 sm:py-16 px-4 sm:px-8 max-w-7xl mx-auto w-full"
     >
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-start">
 
-        {/* Left Column: Tilted Display Heading with Yellow Brush Underline */}
+        {/* Left Column: Clean Display Heading with Forest Green Accent Underline */}
         <div className="lg:col-span-4 text-center lg:text-left">
-          <div className="inline-block -rotate-2 origin-center lg:origin-left">
+          <div className="inline-block origin-center lg:origin-left">
             <h2
               id="good-ingredients-heading"
-              className="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-[#221610] uppercase leading-[0.95]"
+              className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#1C1917] uppercase leading-[0.98]"
             >
               GOOD<br />
               INGREDIENTS.<br />
               GREAT TASTE.
             </h2>
 
-            {/* Sunny Yellow Hand-drawn Underline Stroke */}
+            {/* Forest Green Hand-drawn Underline Stroke */}
             <svg
               viewBox="0 0 260 18"
               aria-hidden="true"
-              className="w-56 sm:w-64 h-4 mt-2 mx-auto lg:mx-0 text-[#FAD051]"
+              className="w-56 sm:w-64 h-4 mt-2.5 mx-auto lg:mx-0 text-[#146B2E]"
             >
               <path
                 d="M4 11 C75 4, 175 4, 254 9"
@@ -126,22 +127,22 @@ export default function GoodIngredients() {
                 </div>
 
                 {/* Title & Copy */}
-                <h3 className="font-display text-xs sm:text-sm font-extrabold uppercase tracking-wide text-[#221610] mt-3">
+                <h3 className="font-display text-xs sm:text-sm font-extrabold uppercase tracking-wide text-[#1C1917] mt-3">
                   {item.title}
                 </h3>
-                <p className="text-xs text-[#221610]/70 font-medium leading-relaxed mt-1.5 max-w-[230px]">
+                <p className="text-xs text-[#1C1917]/75 font-medium leading-relaxed mt-1.5 max-w-[230px]">
                   {item.description}
                 </p>
               </div>
             ))}
           </div>
 
-          {/* Centered Dark Espresso Pill Button */}
+          {/* Centered Forest Green Pill Button */}
           <div className="mt-8 sm:mt-10">
             <button
               type="button"
               onClick={scrollToAbout}
-              className="rounded-full bg-[#221610] hover:bg-black text-white px-7 py-3 text-xs sm:text-sm font-bold tracking-wide inline-flex items-center gap-2.5 shadow-sm transition-all active:scale-95"
+              className="rounded-full bg-[#16692B] hover:bg-[#115221] text-white px-7 py-3 text-xs sm:text-sm font-bold tracking-wide inline-flex items-center gap-2.5 shadow-sm transition-all active:scale-95"
             >
               <span>Learn more</span>
               <ArrowRight className="w-4 h-4" />

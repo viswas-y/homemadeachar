@@ -8,21 +8,31 @@ export default {
     extend: {
       colors: {
         brand: {
-          yellow: '#FAD051',      // Sunny golden-yellow container card background
-          yellowLight: '#FDF2D0',
-          canvas: '#FBF8F1',      // Warm off-white / light cream main canvas
-          dark: '#221610',        // Rich dark espresso text, buttons, and icon circles
-          darkHover: '#140C08',
-          cardOrange: '#FDBA74',  // Card 1 inner box
-          cardGreen: '#86EFAC',   // Card 2 inner box
-          cardPink: '#FDA4AF',    // Card 3 inner box
-          cardBlue: '#93C5FD',    // Card 4 inner box
-          cardYellow: '#FDE047',
-          cardPurple: '#D8B4FE',
+          green: '#146B2E',
+          greenGrid: '#0E7124',
+          greenCta: '#16692B',
+          greenHover: '#115221',
+          greenDark: '#0B3D1A',
+          lime: '#BEF264',
+          sage: '#EDF5EE',
+          canvas: '#F7F7F5',
+          card: '#ECECE8',
+          ink: '#1C1917',
+          offwhite: '#F7F7F5',
+          yellow: '#146B2E',
+          yellowLight: '#EDF5EE',
+          dark: '#1C1917',
+          darkHover: '#0F0D0C',
+          cardOrange: '#ECECE8',
+          cardGreen: '#ECECE8',
+          cardPink: '#ECECE8',
+          cardBlue: '#ECECE8',
+          cardYellow: '#ECECE8',
+          cardPurple: '#ECECE8',
         }
       },
       fontFamily: {
-        display: ['Fredoka', '"Noto Sans Malayalam"', 'sans-serif'],
+        display: ['"Plus Jakarta Sans"', '"Noto Sans Malayalam"', 'system-ui', 'sans-serif'],
         sans: ['"Plus Jakarta Sans"', '"Noto Sans Malayalam"', 'system-ui', 'sans-serif'],
       },
       borderRadius: {

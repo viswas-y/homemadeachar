@@ -40,10 +40,10 @@ export function SpiceBadge({ level, showLabel = true, className = "" }) {
   const count = level === 'hot' ? 3 : level === 'medium' ? 2 : 1;
   const labelText = level === 'hot' ? 'Hot & Spicy' : level === 'medium' ? 'Medium Spice' : 'Mild Spice';
   const colorClass = level === 'hot' 
-    ? 'text-chilli-600 dark:text-chilli-400 bg-chilli-50 dark:bg-chilli-950/50 border-chilli-200 dark:border-chilli-900' 
+    ? 'text-red-700 bg-red-50 border-red-200' 
     : level === 'medium' 
-      ? 'text-turmeric-700 dark:text-turmeric-300 bg-turmeric-50 dark:bg-turmeric-950/50 border-turmeric-200 dark:border-turmeric-900' 
-      : 'text-leaf-700 dark:text-leaf-300 bg-leaf-50 dark:bg-leaf-950/50 border-leaf-200 dark:border-leaf-900';
+      ? 'text-amber-700 bg-amber-50 border-amber-200' 
+      : 'text-[#146B2E] bg-[#EDF5EE] border-[#146B2E]/25';
 
   return (
     <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-bold border ${colorClass} ${className}`}>

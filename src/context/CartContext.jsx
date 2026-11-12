@@ -6,7 +6,7 @@ const CartContext = createContext();
 export function CartProvider({ children }) {
   const [cart, setCart] = useState(() => {
     try {
-      const stored = localStorage.getItem('homemade_achar_cart');
+      const stored = localStorage.getItem('the_spice_jar_cart') || localStorage.getItem('homemade_achar_cart');
       return stored ? JSON.parse(stored) : [];
     } catch (e) {
       console.error('Failed to load cart from localStorage:', e);
@@ -19,7 +19,7 @@ export function CartProvider({ children }) {
 
   useEffect(() => {
     try {
-      localStorage.setItem('homemade_achar_cart', JSON.stringify(cart));
+      localStorage.setItem('the_spice_jar_cart', JSON.stringify(cart));
     } catch (e) {
       console.error('Failed to save cart to localStorage:', e);
     }

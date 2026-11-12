@@ -4,7 +4,7 @@ const ThemeContext = createContext();
 
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(() => {
-    const saved = localStorage.getItem('homemade_achar_theme');
+    const saved = localStorage.getItem('the_spice_jar_theme') || localStorage.getItem('homemade_achar_theme');
     if (saved) return saved;
     return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   });
@@ -16,7 +16,7 @@ export function ThemeProvider({ children }) {
     } else {
       root.classList.remove('dark');
     }
-    localStorage.setItem('homemade_achar_theme', theme);
+    localStorage.setItem('the_spice_jar_theme', theme);
   }, [theme]);
 
   const toggleTheme = () => {

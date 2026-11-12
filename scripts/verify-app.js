@@ -9,11 +9,11 @@ import { buildProductSchema } from '../src/utils/seo.js';
 import fs from 'fs';
 import path from 'path';
 
-console.log('🧪 Starting Home Made Achar Verification Suite (Real Photography Edition)...\n');
+console.log('🧪 Starting The Spice Jar Verification Suite (Real Photography Edition)...\n');
 
 // 1. Verify SHOP_CONFIG
 console.log('1️⃣ Checking Shop Configuration...');
-assert.strictEqual(SHOP_CONFIG.name, 'Home Made Achar', 'Shop name matches specification');
+assert.strictEqual(SHOP_CONFIG.name, 'The Spice Jar', 'Shop name matches specification');
 assert.ok(SHOP_CONFIG.whatsappNumber, 'WhatsApp number is defined');
 assert.ok(!SHOP_CONFIG.whatsappNumber.includes('+'), 'WhatsApp number formatted cleanly for wa.me URL');
 assert.ok(SHOP_CONFIG.phone, 'Phone number defined');
@@ -99,6 +99,8 @@ console.log('   ✅ JSON-LD schema builder verified.');
 // 7. Verify Showcase Section, Gallery & Story Assets
 console.log('\n7️⃣ Checking Showcase Section, Gallery & Story Photography...');
 const extraAssets = [
+  '/images/logo.jpg',
+  '/images/hero-kitchen.jpg',
   '/images/about-story.jpg',
   '/images/sections/ingredient-mangoes.jpg',
   '/images/sections/ingredient-spices.jpg',

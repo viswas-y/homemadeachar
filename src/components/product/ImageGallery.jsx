@@ -19,7 +19,7 @@ export default function ImageGallery({ images, title }) {
     <div className="space-y-4">
       {/* Main Large Display Stage */}
       <div
-        className="relative aspect-square w-full rounded-2xl bg-gradient-to-b from-cream-100 to-cream-200/60 dark:from-stone-900 dark:to-stone-950 border border-cream-200 dark:border-stone-800 p-6 flex items-center justify-center overflow-hidden cursor-crosshair group shadow-inner"
+        className="relative aspect-square w-full rounded-2xl bg-[#ECECE8] border border-stone-200 p-6 flex items-center justify-center overflow-hidden cursor-crosshair group shadow-xs"
         onMouseEnter={() => setIsZoomed(true)}
         onMouseLeave={() => setIsZoomed(false)}
         onMouseMove={handleMouseMove}
@@ -41,7 +41,7 @@ export default function ImageGallery({ images, title }) {
         />
 
         {/* Zoom Hint Badge */}
-        <div className="absolute bottom-3 right-3 px-2.5 py-1 rounded-full bg-stone-900/70 text-cream-50 text-xs font-semibold flex items-center gap-1.5 pointer-events-none backdrop-blur-xs">
+        <div className="absolute bottom-3 right-3 px-2.5 py-1 rounded-full bg-[#1C1917]/75 text-white text-xs font-semibold flex items-center gap-1.5 pointer-events-none backdrop-blur-xs">
           <ZoomIn className="w-3.5 h-3.5" />
           <span>{isZoomed ? 'Zoomed' : 'Hover / Tap to Zoom'}</span>
         </div>
@@ -58,10 +58,10 @@ export default function ImageGallery({ images, title }) {
               aria-selected={idx === activeImageIndex}
               aria-label={`View angle ${idx + 1} of ${title}`}
               onClick={() => setActiveImageIndex(idx)}
-              className={`relative aspect-square rounded-xl p-2 bg-cream-100/60 dark:bg-stone-900 border-2 overflow-hidden transition-all duration-200 ${
+              className={`relative aspect-square rounded-xl p-2 bg-[#ECECE8] border-2 overflow-hidden transition-all duration-200 ${
                 idx === activeImageIndex
-                  ? 'border-turmeric-500 shadow-md ring-2 ring-turmeric-400/30 dark:ring-turmeric-400/20'
-                  : 'border-cream-200 dark:border-stone-800 hover:border-turmeric-300 opacity-70 hover:opacity-100'
+                  ? 'border-[#146B2E] shadow-md ring-2 ring-[#146B2E]/25'
+                  : 'border-stone-200 hover:border-[#146B2E]/50 opacity-75 hover:opacity-100'
               }`}
             >
               <img

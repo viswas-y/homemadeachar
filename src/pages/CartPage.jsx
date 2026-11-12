@@ -80,57 +80,57 @@ export default function CartPage() {
   };
 
   return (
-    <div className="py-8 sm:py-14 px-3 sm:px-6 lg:px-8 text-[#221610] min-h-[75vh]">
+    <div className="py-8 sm:py-14 px-3 sm:px-6 lg:px-8 text-[#1C1917] min-h-[75vh]">
       <div className="max-w-7xl mx-auto space-y-6">
         
         {/* Back Link */}
         <div>
           <Link
             to="/#products"
-            className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#221610]/70 hover:text-[#221610]"
+            className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#1C1917]/70 hover:text-[#1C1917]"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
             Continue Shopping
           </Link>
-          <h1 className="font-display text-3xl sm:text-4xl font-extrabold uppercase tracking-tight text-[#221610] mt-1">
+          <h1 className="font-display text-3xl sm:text-4xl font-extrabold uppercase tracking-tight text-[#1C1917] mt-1">
             Your Cart
           </h1>
         </div>
 
         {cart.length === 0 && !orderSent ? (
-          <div className="rounded-[28px] sm:rounded-[36px] bg-[#FAD051] p-12 sm:p-16 text-center max-w-lg mx-auto shadow-xs my-8 space-y-4">
-            <h2 className="font-display text-3xl font-extrabold text-[#221610] uppercase">
+          <div className="rounded-[28px] sm:rounded-[36px] bg-[#EDF5EE] border border-[#146B2E]/20 p-12 sm:p-16 text-center max-w-lg mx-auto shadow-xs my-8 space-y-4">
+            <h2 className="font-display text-3xl font-extrabold text-[#1C1917] uppercase">
               Your cart is empty
             </h2>
-            <p className="text-xs sm:text-sm text-[#221610]/80 font-medium max-w-xs mx-auto">
+            <p className="text-xs sm:text-sm text-[#1C1917]/80 font-medium max-w-xs mx-auto">
               Choose from our authentic small-batch Kerala achars made with cold-pressed oil and roasted spices.
             </p>
             <Link
               to="/#products"
-              className="inline-block rounded-full bg-[#221610] hover:bg-black text-white px-7 py-3 text-xs font-extrabold uppercase tracking-wide transition-colors"
+              className="inline-block rounded-full bg-[#16692B] hover:bg-[#115221] text-white px-7 py-3 text-xs font-extrabold uppercase tracking-wide transition-colors"
             >
               Explore Pickles
             </Link>
           </div>
         ) : orderSent ? (
-          <div className="rounded-[28px] sm:rounded-[36px] bg-[#FAD051] p-10 sm:p-14 text-center max-w-lg mx-auto shadow-xs space-y-4">
-            <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center mx-auto text-[#221610]">
+          <div className="rounded-[28px] sm:rounded-[36px] bg-[#EDF5EE] border border-[#146B2E]/20 p-10 sm:p-14 text-center max-w-lg mx-auto shadow-xs space-y-4">
+            <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center mx-auto text-[#1C1917]">
               <Check className="w-8 h-8 stroke-[3]" />
             </div>
 
             <div>
-              <span className="text-[11px] uppercase tracking-wider font-extrabold text-[#221610]/70 block">
+              <span className="text-[11px] uppercase tracking-wider font-extrabold text-[#1C1917]/70 block">
                 ORDER DISPATCHED
               </span>
-              <h2 className="font-display text-3xl font-extrabold text-[#221610] uppercase mt-1">
+              <h2 className="font-display text-3xl font-extrabold text-[#1C1917] uppercase mt-1">
                 Thank You, {placedSnapshot?.customer?.name}
               </h2>
-              <p className="text-xs text-[#221610]/80 font-medium mt-2 leading-relaxed max-w-sm mx-auto">
+              <p className="text-xs text-[#1C1917]/80 font-medium mt-2 leading-relaxed max-w-sm mx-auto">
                 Your order has opened in WhatsApp. Please tap "Send" in WhatsApp so Valsala Amma receives your message.
               </p>
             </div>
 
-            <div className="p-4 rounded-2xl bg-white/80 text-left text-xs text-[#221610] space-y-1.5 border border-black/5 font-medium">
+            <div className="p-4 rounded-2xl bg-white/80 text-left text-xs text-[#1C1917] space-y-1.5 border border-black/5 font-medium">
               <div className="flex justify-between font-extrabold text-sm">
                 <span>Total Amount:</span>
                 <span className="font-display">{formatINR(placedSnapshot?.total)}</span>
@@ -145,7 +145,7 @@ export default function CartPage() {
               <Link
                 to="/"
                 onClick={clearCart}
-                className="rounded-full bg-[#221610] hover:bg-black text-white px-7 py-3 text-xs font-extrabold uppercase tracking-wide transition-colors"
+                className="rounded-full bg-[#16692B] hover:bg-[#115221] text-white px-7 py-3 text-xs font-extrabold uppercase tracking-wide transition-colors"
               >
                 Back to Home
               </Link>
@@ -158,7 +158,7 @@ export default function CartPage() {
             <div className="lg:col-span-7 space-y-4">
               
               {/* Free delivery prompt */}
-              <div className="p-4 rounded-2xl bg-[#FAD051]/30 border border-[#FAD051] text-xs text-[#221610] font-bold flex items-center justify-between">
+              <div className="p-4 rounded-2xl bg-[#EDF5EE] border border-[#146B2E]/25 text-xs text-[#146B2E] font-bold flex items-center justify-between">
                 <span>
                   {remainingForFreeShipping === 0 ? (
                     'Your order qualifies for free delivery across India!'
@@ -166,17 +166,17 @@ export default function CartPage() {
                     <>Add {formatINR(remainingForFreeShipping)} more for free delivery.</>
                   )}
                 </span>
-                <span className="text-[11px] font-medium text-[#221610]/60">Threshold: {formatINR(freeShippingThreshold)}</span>
+                <span className="text-[11px] font-medium text-[#1C1917]/60">Threshold: {formatINR(freeShippingThreshold)}</span>
               </div>
 
               {/* Items Card */}
               <div className="bg-white rounded-3xl border border-black/5 p-6 divide-y divide-black/10 shadow-xs">
-                <div className="pb-3 flex justify-between items-center text-xs font-extrabold uppercase tracking-wider text-[#221610]/60">
+                <div className="pb-3 flex justify-between items-center text-xs font-extrabold uppercase tracking-wider text-[#1C1917]/60">
                   <span>Selected Jars ({totalItems})</span>
                   <button
                     type="button"
                     onClick={clearCart}
-                    className="text-[#221610]/40 hover:text-[#221610] transition-colors"
+                    className="text-[#1C1917]/40 hover:text-[#1C1917] transition-colors"
                   >
                     Clear All
                   </button>
@@ -191,13 +191,13 @@ export default function CartPage() {
                     />
 
                     <div className="flex-1 min-w-0">
-                      <span className="text-[10px] font-extrabold text-[#221610]/50 uppercase tracking-wider block">
+                      <span className="text-[10px] font-extrabold text-[#1C1917]/50 uppercase tracking-wider block">
                         {item.size}
                       </span>
-                      <h3 className="font-display font-bold text-base text-[#221610] truncate">
+                      <h3 className="font-display font-bold text-base text-[#1C1917] truncate">
                         {item.name}
                       </h3>
-                      <p className="text-xs text-[#221610]/70 font-semibold mt-0.5">
+                      <p className="text-xs text-[#1C1917]/70 font-semibold mt-0.5">
                         {formatINR(item.price)} each
                       </p>
 
@@ -206,17 +206,17 @@ export default function CartPage() {
                           <button
                             type="button"
                             onClick={() => updateQuantity(item.cartItemId, item.quantity - 1)}
-                            className="p-1 hover:bg-stone-200 rounded-full text-[#221610]"
+                            className="p-1 hover:bg-stone-200 rounded-full text-[#1C1917]"
                           >
                             <Minus className="w-3 h-3" />
                           </button>
-                          <span className="w-6 text-center text-xs font-extrabold text-[#221610]">
+                          <span className="w-6 text-center text-xs font-extrabold text-[#1C1917]">
                             {item.quantity}
                           </span>
                           <button
                             type="button"
                             onClick={() => updateQuantity(item.cartItemId, item.quantity + 1)}
-                            className="p-1 hover:bg-stone-200 rounded-full text-[#221610]"
+                            className="p-1 hover:bg-stone-200 rounded-full text-[#1C1917]"
                           >
                             <Plus className="w-3 h-3" />
                           </button>
@@ -225,7 +225,7 @@ export default function CartPage() {
                         <button
                           type="button"
                           onClick={() => removeFromCart(item.cartItemId)}
-                          className="p-1 text-[#221610]/40 hover:text-[#221610] transition-colors ml-1"
+                          className="p-1 text-[#1C1917]/40 hover:text-[#1C1917] transition-colors ml-1"
                         >
                           <Trash2 className="w-3.5 h-3.5" />
                         </button>
@@ -233,7 +233,7 @@ export default function CartPage() {
                     </div>
 
                     <div className="text-right">
-                      <span className="font-display font-extrabold text-base text-[#221610]">
+                      <span className="font-display font-extrabold text-base text-[#1C1917]">
                         {formatINR(item.price * item.quantity)}
                       </span>
                     </div>
@@ -246,16 +246,16 @@ export default function CartPage() {
             <div className="lg:col-span-5 space-y-4">
               <div className="bg-white rounded-3xl border border-black/5 p-6 sm:p-7 shadow-xs">
                 
-                <h3 className="font-display font-extrabold text-2xl text-[#221610] uppercase mb-1">
+                <h3 className="font-display font-extrabold text-2xl text-[#1C1917] uppercase mb-1">
                   Delivery Details
                 </h3>
-                <p className="text-xs text-[#221610]/70 font-medium mb-5">
+                <p className="text-xs text-[#1C1917]/70 font-medium mb-5">
                   Confirm your address. We'll generate your WhatsApp order instantly.
                 </p>
 
                 <form onSubmit={handlePlaceOrder} className="space-y-4">
                   <div>
-                    <label className="block text-xs uppercase tracking-wider font-extrabold text-[#221610] mb-1">
+                    <label className="block text-xs uppercase tracking-wider font-extrabold text-[#1C1917] mb-1">
                       Full Name *
                     </label>
                     <input
@@ -263,13 +263,13 @@ export default function CartPage() {
                       placeholder="e.g. Rahul Varma"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-xl border border-black/15 text-xs text-[#221610] bg-[#FBF8F1] focus:bg-white focus:border-[#221610]"
+                      className="w-full px-4 py-2.5 rounded-xl border border-black/15 text-xs text-[#1C1917] bg-[#F7F7F5] focus:bg-white focus:border-[#1C1917]"
                     />
                     {errors.name && <p className="text-xs text-red-600 mt-1 font-semibold">{errors.name}</p>}
                   </div>
 
                   <div>
-                    <label className="block text-xs uppercase tracking-wider font-extrabold text-[#221610] mb-1">
+                    <label className="block text-xs uppercase tracking-wider font-extrabold text-[#1C1917] mb-1">
                       WhatsApp Number *
                     </label>
                     <input
@@ -277,13 +277,13 @@ export default function CartPage() {
                       placeholder="e.g. 9847012345"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-xl border border-black/15 text-xs text-[#221610] bg-[#FBF8F1] focus:bg-white focus:border-[#221610]"
+                      className="w-full px-4 py-2.5 rounded-xl border border-black/15 text-xs text-[#1C1917] bg-[#F7F7F5] focus:bg-white focus:border-[#1C1917]"
                     />
                     {errors.phone && <p className="text-xs text-red-600 mt-1 font-semibold">{errors.phone}</p>}
                   </div>
 
                   <div>
-                    <label className="block text-xs uppercase tracking-wider font-extrabold text-[#221610] mb-1">
+                    <label className="block text-xs uppercase tracking-wider font-extrabold text-[#1C1917] mb-1">
                       Delivery Address *
                     </label>
                     <textarea
@@ -291,14 +291,14 @@ export default function CartPage() {
                       placeholder="House/Flat No., Street, City & State"
                       value={formData.address}
                       onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-xl border border-black/15 text-xs text-[#221610] bg-[#FBF8F1] focus:bg-white focus:border-[#221610]"
+                      className="w-full px-4 py-2.5 rounded-xl border border-black/15 text-xs text-[#1C1917] bg-[#F7F7F5] focus:bg-white focus:border-[#1C1917]"
                     />
                     {errors.address && <p className="text-xs text-red-600 mt-1 font-semibold">{errors.address}</p>}
                   </div>
 
                   <div className="grid grid-cols-2 gap-3">
                     <div>
-                      <label className="block text-xs uppercase tracking-wider font-extrabold text-[#221610] mb-1">
+                      <label className="block text-xs uppercase tracking-wider font-extrabold text-[#1C1917] mb-1">
                         PIN Code *
                       </label>
                       <input
@@ -307,13 +307,13 @@ export default function CartPage() {
                         placeholder="e.g. 682021"
                         value={formData.pincode}
                         onChange={(e) => setFormData({ ...formData, pincode: e.target.value })}
-                        className="w-full px-4 py-2.5 rounded-xl border border-black/15 text-xs text-[#221610] bg-[#FBF8F1] focus:bg-white focus:border-[#221610]"
+                        className="w-full px-4 py-2.5 rounded-xl border border-black/15 text-xs text-[#1C1917] bg-[#F7F7F5] focus:bg-white focus:border-[#1C1917]"
                       />
                       {errors.pincode && <p className="text-xs text-red-600 mt-1 font-semibold">{errors.pincode}</p>}
                     </div>
 
                     <div>
-                      <label className="block text-xs uppercase tracking-wider font-extrabold text-[#221610] mb-1">
+                      <label className="block text-xs uppercase tracking-wider font-extrabold text-[#1C1917] mb-1">
                         Note
                       </label>
                       <input
@@ -321,30 +321,30 @@ export default function CartPage() {
                         placeholder="Optional"
                         value={formData.note}
                         onChange={(e) => setFormData({ ...formData, note: e.target.value })}
-                        className="w-full px-4 py-2.5 rounded-xl border border-black/15 text-xs text-[#221610] bg-[#FBF8F1] focus:bg-white focus:border-[#221610]"
+                        className="w-full px-4 py-2.5 rounded-xl border border-black/15 text-xs text-[#1C1917] bg-[#F7F7F5] focus:bg-white focus:border-[#1C1917]"
                       />
                     </div>
                   </div>
 
                   {/* Summary Totals */}
                   <div className="pt-3 border-t border-black/10 space-y-1.5 text-xs font-medium">
-                    <div className="flex justify-between text-[#221610]/70">
+                    <div className="flex justify-between text-[#1C1917]/70">
                       <span>Subtotal</span>
-                      <span className="font-bold text-[#221610]">{formatINR(subtotal)}</span>
+                      <span className="font-bold text-[#1C1917]">{formatINR(subtotal)}</span>
                     </div>
 
-                    <div className="flex justify-between text-[#221610]/70">
+                    <div className="flex justify-between text-[#1C1917]/70">
                       <span>Delivery</span>
-                      <span className="font-bold text-[#221610]">
+                      <span className="font-bold text-[#1C1917]">
                         {shippingFee === 0 ? 'Free' : formatINR(shippingFee)}
                       </span>
                     </div>
 
                     <div className="pt-2 border-t border-black/10 flex justify-between items-baseline">
-                      <span className="font-display font-extrabold text-base text-[#221610] uppercase">
+                      <span className="font-display font-extrabold text-base text-[#1C1917] uppercase">
                         Total
                       </span>
-                      <span className="font-display font-extrabold text-2xl text-[#221610]">
+                      <span className="font-display font-extrabold text-2xl text-[#1C1917]">
                         {formatINR(total)}
                       </span>
                     </div>
@@ -352,7 +352,7 @@ export default function CartPage() {
 
                   <button
                     type="submit"
-                    className="w-full rounded-full bg-[#221610] hover:bg-black text-white py-3.5 px-6 text-xs font-extrabold uppercase tracking-wide flex items-center justify-center gap-2 transition-colors mt-2 shadow-sm"
+                    className="w-full rounded-full bg-[#16692B] hover:bg-[#115221] text-white py-3.5 px-6 text-xs font-extrabold uppercase tracking-wide flex items-center justify-center gap-2 transition-colors mt-2 shadow-sm"
                   >
                     <span>Place Order on WhatsApp</span>
                     <ArrowRight className="w-3.5 h-3.5" />

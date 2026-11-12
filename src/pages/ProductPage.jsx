@@ -18,7 +18,7 @@ export default function ProductPage() {
     window.scrollTo(0, 0);
   }, [slug]);
 
-  const [selectedSize, setSelectedSize] = useState(() => 
+  const [selectedSize, setSelectedSize] = useState(() =>
     product ? product.sizes[0] : null
   );
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
@@ -40,12 +40,12 @@ export default function ProductPage() {
 
   if (!product || !selectedSize) {
     return (
-      <div className="min-h-[70vh] flex flex-col items-center justify-center p-8 text-center text-[#221610]">
+      <div className="min-h-[70vh] flex flex-col items-center justify-center p-8 text-center text-[#1C1917]">
         <h2 className="font-display text-3xl font-bold">Pickle Not Found</h2>
-        <p className="mt-2 text-sm text-[#221610]/70">The product you are looking for is unavailable.</p>
+        <p className="mt-2 text-sm text-[#1C1917]/70">The product you are looking for is unavailable.</p>
         <Link
           to="/"
-          className="mt-6 rounded-full bg-[#221610] text-white px-6 py-2.5 text-xs font-bold tracking-wide"
+          className="mt-6 rounded-full bg-[#16692B] hover:bg-[#115221] text-white px-6 py-2.5 text-xs font-bold tracking-wide"
         >
           Return to Home
         </Link>
@@ -64,43 +64,43 @@ export default function ProductPage() {
   const currentPrice = selectedSize.price * quantity;
 
   return (
-    <div className="py-6 sm:py-10 px-3 sm:px-6 lg:px-8 text-[#221610]">
+    <div className="py-6 sm:py-10 px-3 sm:px-6 lg:px-8 text-[#1C1917]">
       <div className="max-w-7xl mx-auto space-y-6">
-        
+
         {/* Minimal Breadcrumb */}
         <nav aria-label="Breadcrumb">
-          <ol className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#221610]/60">
+          <ol className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#1C1917]/60">
             <li>
-              <Link to="/" className="hover:text-[#221610] transition-colors">
+              <Link to="/" className="hover:text-[#1C1917] transition-colors">
                 Home
               </Link>
             </li>
             <li aria-hidden="true">
-              <ChevronRight className="w-3.5 h-3.5 text-[#221610]/40" />
+              <ChevronRight className="w-3.5 h-3.5 text-[#1C1917]/40" />
             </li>
             <li>
-              <Link to="/#products" className="hover:text-[#221610] transition-colors">
+              <Link to="/#products" className="hover:text-[#1C1917] transition-colors">
                 Products
               </Link>
             </li>
             <li aria-hidden="true">
-              <ChevronRight className="w-3.5 h-3.5 text-[#221610]/40" />
+              <ChevronRight className="w-3.5 h-3.5 text-[#1C1917]/40" />
             </li>
-            <li className="text-[#221610] font-extrabold" aria-current="page">
+            <li className="text-[#1C1917] font-extrabold" aria-current="page">
               {product.name}
             </li>
           </ol>
         </nav>
 
         {/* Main Product Showcase Card: Rounded Yellow Container matching Hero */}
-        <div className="rounded-[28px] sm:rounded-[36px] bg-[#FAD051] p-6 sm:p-12 lg:p-14 shadow-xs">
+        <div className="rounded-[28px] sm:rounded-[36px] bg-white border border-stone-200/80 p-6 sm:p-12 lg:p-14 shadow-xs">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
-            
+
             {/* Left Column: Jar with Product Box Background */}
             <div className="lg:col-span-6 space-y-4">
               <div className={`w-full aspect-[4/5] ${product.boxColor} rounded-3xl flex items-center justify-center overflow-hidden border-2 border-white/50 shadow-sm p-3 sm:p-5 relative`}>
                 {product.tag && (
-                  <span className="absolute top-4 left-4 z-10 px-3 py-1 rounded-full bg-white text-[#221610] text-xs font-extrabold uppercase tracking-wider shadow-xs">
+                  <span className="absolute top-4 left-4 z-10 px-3 py-1 rounded-full bg-white text-[#1C1917] text-xs font-extrabold uppercase tracking-wider shadow-xs">
                     {product.tag}
                   </span>
                 )}
@@ -122,7 +122,7 @@ export default function ProductPage() {
                       aria-label={`View photo ${idx + 1}`}
                       className={`w-16 h-16 rounded-xl overflow-hidden border-2 transition-all ${
                         idx === selectedImageIndex
-                          ? 'border-[#221610] ring-2 ring-[#221610]'
+                          ? 'border-[#146B2E] ring-2 ring-[#146B2E]'
                           : 'border-white/50 opacity-70 hover:opacity-100'
                       }`}
                     >
@@ -135,32 +135,32 @@ export default function ProductPage() {
 
             {/* Right Column: Clean Details */}
             <div className="lg:col-span-6 space-y-5">
-              
+
               <div>
-                <span className="text-xs font-bold text-[#221610]/70 uppercase tracking-widest block">
+                <span className="text-xs font-bold text-[#146B2E] uppercase tracking-widest block">
                   {product.malayalamName}
                 </span>
-                <h1 className="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-[#221610] uppercase mt-1 leading-tight">
+                <h1 className="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-[#1C1917] uppercase mt-1 leading-tight">
                   {product.name}
                 </h1>
-                <p className="mt-2 text-sm sm:text-base text-[#221610]/90 font-medium leading-relaxed">
+                <p className="mt-2 text-sm sm:text-base text-[#1C1917]/90 font-medium leading-relaxed">
                   {product.shortDescription}
                 </p>
               </div>
 
               {/* Price */}
               <div className="py-1">
-                <span className="font-display text-3xl sm:text-4xl font-extrabold text-[#221610]">
+                <span className="font-display text-3xl sm:text-4xl font-extrabold text-[#1C1917]">
                   {formatINR(selectedSize.price)}
                 </span>
-                <span className="text-xs text-[#221610]/70 ml-2 font-bold">
+                <span className="text-xs text-[#1C1917]/70 ml-2 font-bold">
                   ({selectedSize.size} Jar)
                 </span>
               </div>
 
               {/* Size Selector */}
               <div className="space-y-2">
-                <label className="block text-xs uppercase tracking-wider font-extrabold text-[#221610]">
+                <label className="block text-xs uppercase tracking-wider font-extrabold text-[#1C1917]">
                   Select Weight / Size:
                 </label>
                 <div className="flex items-center gap-2.5">
@@ -173,8 +173,8 @@ export default function ProductPage() {
                         onClick={() => setSelectedSize(s)}
                         className={`rounded-full px-5 py-2 text-xs font-extrabold tracking-wide border transition-all ${
                           isSelected
-                            ? 'bg-[#221610] text-white border-[#221610]'
-                            : 'bg-white/60 text-[#221610] border-black/10 hover:bg-white'
+                            ? 'bg-[#146B2E] text-white border-[#146B2E]'
+                            : 'bg-[#F7F7F5] text-[#1C1917] border-stone-200 hover:bg-[#EDF5EE] hover:border-[#146B2E]/40'
                         }`}
                       >
                         {s.size}
@@ -186,7 +186,7 @@ export default function ProductPage() {
 
               {/* Quantity Selector */}
               <div className="space-y-2">
-                <label className="block text-xs uppercase tracking-wider font-extrabold text-[#221610]">
+                <label className="block text-xs uppercase tracking-wider font-extrabold text-[#1C1917]">
                   Quantity:
                 </label>
                 <div className="inline-flex items-center rounded-full border border-black/15 bg-white px-2 py-0.5">
@@ -194,18 +194,18 @@ export default function ProductPage() {
                     type="button"
                     onClick={() => setQuantity(Math.max(1, quantity - 1))}
                     aria-label="Decrease quantity"
-                    className="p-1.5 hover:bg-stone-100 rounded-full text-[#221610] transition-colors"
+                    className="p-1.5 hover:bg-stone-100 rounded-full text-[#1C1917] transition-colors"
                   >
                     <Minus className="w-3.5 h-3.5" />
                   </button>
-                  <span className="w-10 text-center text-xs font-extrabold text-[#221610]">
+                  <span className="w-10 text-center text-xs font-extrabold text-[#1C1917]">
                     {quantity}
                   </span>
                   <button
                     type="button"
                     onClick={() => setQuantity(quantity + 1)}
                     aria-label="Increase quantity"
-                    className="p-1.5 hover:bg-stone-100 rounded-full text-[#221610] transition-colors"
+                    className="p-1.5 hover:bg-stone-100 rounded-full text-[#1C1917] transition-colors"
                   >
                     <Plus className="w-3.5 h-3.5" />
                   </button>
@@ -217,21 +217,21 @@ export default function ProductPage() {
                 <button
                   type="button"
                   onClick={handleAddToCart}
-                  className="w-full sm:w-auto rounded-full bg-[#221610] hover:bg-black text-white px-8 py-3.5 text-xs font-bold tracking-wide transition-colors"
+                  className="w-full sm:w-auto rounded-full bg-[#16692B] hover:bg-[#115221] text-white px-8 py-3.5 text-xs font-bold tracking-wide transition-colors"
                 >
                   Add to cart
                 </button>
                 <button
                   type="button"
                   onClick={handleBuyNow}
-                  className="w-full sm:w-auto rounded-full bg-white hover:bg-stone-100 text-[#221610] border border-black/15 px-8 py-3.5 text-xs font-bold tracking-wide transition-colors"
+                  className="w-full sm:w-auto rounded-full bg-white hover:bg-stone-100 text-[#1C1917] border border-black/15 px-8 py-3.5 text-xs font-bold tracking-wide transition-colors"
                 >
                   Buy now ({formatINR(currentPrice)})
                 </button>
               </div>
 
               {/* Plain-text Facts Row */}
-              <div className="py-4 border-t border-b border-[#221610]/15 text-xs text-[#221610]/80 font-semibold flex flex-wrap items-center gap-x-4 gap-y-1.5">
+              <div className="py-4 border-t border-b border-[#1C1917]/15 text-xs text-[#1C1917]/80 font-semibold flex flex-wrap items-center gap-x-4 gap-y-1.5">
                 <span>No preservatives</span>
                 <span>•</span>
                 <span>Small batch</span>
@@ -243,10 +243,10 @@ export default function ProductPage() {
 
               {/* Ingredients List */}
               <div className="space-y-1">
-                <h3 className="text-xs uppercase tracking-wider font-extrabold text-[#221610]">
+                <h3 className="text-xs uppercase tracking-wider font-extrabold text-[#1C1917]">
                   Ingredients:
                 </h3>
-                <p className="text-xs text-[#221610]/80 leading-relaxed font-medium">
+                <p className="text-xs text-[#1C1917]/80 leading-relaxed font-medium">
                   {product.ingredients.join(', ')}.
                 </p>
               </div>

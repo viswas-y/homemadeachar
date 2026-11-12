@@ -1,74 +1,86 @@
 import React, { useState } from 'react';
-import { ArrowRight } from 'lucide-react';
 import ProductCard from './ProductCard.jsx';
 
-export default function ProductGrid({ products }) {
-  const [activeFilter, setActiveFilter] = useState('all');
+export default function ProductGrid({ products = [] }) {
+  const [filter, setFilter] = useState('all');
 
-  const filtered = products.filter(p => {
-    if (activeFilter === 'veg') return p.veg;
-    if (activeFilter === 'non-veg') return !p.veg;
+  const vegCount = products.filter((p) => p.veg).length;
+  const nonVegCount = products.filter((p) => !p.veg).length;
+
+  const filteredProducts = products.filter((product) => {
+    if (filter === 'veg') return product.veg;
+    if (filter === 'non-veg') return !product.veg;
     return true;
   });
 
   return (
-    <section id="products" className="px-3 sm:px-6 lg:px-8 py-4 sm:py-8">
-      {/* Enclosed Large Rounded Yellow Container Card matching reference */}
-      <div className="max-w-7xl mx-auto rounded-[28px] sm:rounded-[36px] bg-[#FAD051] p-5 sm:p-10 lg:p-12 shadow-xs">
-
-        {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6 sm:mb-8">
+    <section
+      id="shop"
+      aria-labelledby="shop-heading"
+      className="w-full bg-white py-12 sm:py-16 px-4 sm:px-8 border-b border-stone-200/70"
+    >
+      <div className="max-w-7xl mx-auto">
+        {/* Clean Millnadan Header & Filter Bar */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 sm:mb-10">
           <div>
-            <p className="text-[11px] sm:text-xs uppercase tracking-widest font-extrabold text-[#221610]/80">
-              OUR FAVORITES
-            </p>
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#221610] uppercase mt-0.5">
-              ACHAR YOU'LL LOVE
+            <span className="text-[11px] sm:text-xs font-extrabold uppercase tracking-widest text-[#146B2E] block">
+              HOMEMADE KERALA SPECIALTIES
+            </span>
+            <h2
+              id="shop-heading"
+              className="font-display text-2xl sm:text-4xl font-extrabold text-[#1C1917] tracking-tight mt-1"
+            >
+              Our Fresh Achar Collection
             </h2>
           </div>
 
-          {/* Filter Pills / View All on Right */}
-          <div className="flex items-center gap-2">
+          <div
+            role="group"
+            aria-label="Filter pickles by dietary type"
+            className="flex flex-wrap items-center gap-2"
+          >
             <button
               type="button"
-              onClick={() => setActiveFilter('all')}
-              className={`rounded-full px-3.5 py-1 text-xs font-bold transition-colors ${activeFilter === 'all'
-                  ? 'bg-[#221610] text-white'
-                  : 'bg-white/60 hover:bg-white text-[#221610]'
-                }`}
+              onClick={() => setFilter('all')}
+              className={`px-4 py-2 rounded-full text-xs sm:text-sm font-bold transition-all ${
+                filter === 'all'
+                  ? 'bg-[#146B2E] text-white shadow-xs'
+                  : 'bg-[#ECECE8] text-[#1C1917] hover:bg-[#DFDFDA]'
+              }`}
             >
-              All Jars
+              All ({products.length})
             </button>
             <button
               type="button"
-              onClick={() => setActiveFilter('veg')}
-              className={`rounded-full px-3.5 py-1 text-xs font-bold transition-colors ${activeFilter === 'veg'
-                  ? 'bg-[#221610] text-white'
-                  : 'bg-white/60 hover:bg-white text-[#221610]'
-                }`}
+              onClick={() => setFilter('veg')}
+              className={`px-4 py-2 rounded-full text-xs sm:text-sm font-bold transition-all ${
+                filter === 'veg'
+                  ? 'bg-[#146B2E] text-white shadow-xs'
+                  : 'bg-[#ECECE8] text-[#1C1917] hover:bg-[#DFDFDA]'
+              }`}
             >
-              Veg
+              Veg ({vegCount})
             </button>
             <button
               type="button"
-              onClick={() => setActiveFilter('non-veg')}
-              className={`rounded-full px-3.5 py-1 text-xs font-bold transition-colors ${activeFilter === 'non-veg'
-                  ? 'bg-[#221610] text-white'
-                  : 'bg-white/60 hover:bg-white text-[#221610]'
-                }`}
+              onClick={() => setFilter('non-veg')}
+              className={`px-4 py-2 rounded-full text-xs sm:text-sm font-bold transition-all ${
+                filter === 'non-veg'
+                  ? 'bg-[#146B2E] text-white shadow-xs'
+                  : 'bg-[#ECECE8] text-[#1C1917] hover:bg-[#DFDFDA]'
+              }`}
             >
-              Non-Veg
+              Non-Veg ({nonVegCount})
             </button>
           </div>
         </div>
 
-        {/* Product Cards Grid: 2 columns on mobile, 4 columns on desktop */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5">
-          {filtered.map((product) => (
+        {/* Studio Product Card Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-7 lg:gap-8">
+          {filteredProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
-
       </div>
     </section>
   );

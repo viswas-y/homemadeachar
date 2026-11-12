@@ -14,7 +14,7 @@ export default function App() {
   return (
     <CartProvider>
       <BrowserRouter>
-        <div className="flex flex-col min-h-screen bg-brand-offwhite text-stone-900 selection:bg-stone-900 selection:text-white font-sans">
+        <div className="flex flex-col min-h-screen bg-[#F7F7F5] text-[#1C1917] selection:bg-[#146B2E] selection:text-white font-sans">
           {/* Header (Minimal, centred logo, split links, right cart) */}
           <Header />
 

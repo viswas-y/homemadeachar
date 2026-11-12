@@ -4,6 +4,7 @@ import { PRODUCTS } from '../data/products.js';
 import { useSEO } from '../utils/seo.js';
 import Hero from '../components/home/Hero.jsx';
 import ValueBadges from '../components/home/ValueBadges.jsx';
+import BrandFeatureBand from '../components/home/BrandFeatureBand.jsx';
 import ProductGrid from '../components/home/ProductGrid.jsx';
 import GoodIngredients from '../components/home/GoodIngredients.jsx';
 import FlavorSpotlight from '../components/home/FlavorSpotlight.jsx';
@@ -33,29 +34,32 @@ export default function HomePage() {
   });
 
   return (
-    <div className="flex flex-col min-h-screen space-y-2 sm:space-y-4">
-      {/* 1. Large Rounded Yellow Hero Container */}
+    <div className="flex flex-col min-h-screen bg-[#F7F7F5]">
+      {/* 1. Full-Width Kerala Kitchen Panoramic Hero Slider */}
       <Hero />
 
-      {/* 2. Circular Feature Badges Row (Desktop: 6 flex | Mobile: 2-col grid) */}
+      {/* 2. Organic Pebble Purity Highlights */}
       <ValueBadges />
 
-      {/* 3. "OUR FAVORITES / ACHAR YOU'LL LOVE" Yellow Container Card */}
+      {/* 3. Signature Emerald Grid Brand Band */}
+      <BrandFeatureBand />
+
+      {/* 4. Clean Neutral Product Showcase */}
       <ProductGrid products={PRODUCTS} />
 
-      {/* 4. "GOOD INGREDIENTS. GREAT TASTE." Clean Canvas Section */}
+      {/* 5. "GOOD INGREDIENTS. GREAT TASTE." Pure Breakdown */}
       <GoodIngredients />
 
-      {/* 5. Split Feature Spotlight ("NEW BATCH / SPICY, TANGY, IRRESISTIBLE") */}
+      {/* 6. Split Feature Spotlight */}
       <FlavorSpotlight />
 
-      {/* 6. "FROM OUR KITCHEN" Process Gallery Container */}
+      {/* 7. "FROM OUR KITCHEN" Process Gallery Container */}
       <Gallery />
 
-      {/* 5. "MADE BY AMMA" Story Container */}
+      {/* 8. "MADE BY AMMA" Story Container */}
       <About />
 
-      {/* 6. FAQ Accordion Container */}
+      {/* 9. FAQ Accordion Container */}
       <FAQ />
     </div>
   );

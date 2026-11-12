@@ -110,10 +110,10 @@ export default function Lightbox({ items, currentIndex, isOpen, onClose, onNavig
 
         <div className="w-full mt-4 bg-white text-stone-950 p-5 rounded-2xl border border-black/10 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
-            <span className="text-[11px] uppercase font-bold tracking-wider text-stone-500 block">
+            <span className="text-[11px] uppercase font-bold tracking-wider text-[#146B2E] block">
               {currentItem.step} • {currentItem.malayalam}
             </span>
-            <h3 className="font-serif font-bold text-xl text-stone-950 mt-0.5">
+            <h3 className="font-display font-bold text-xl text-[#1C1917] mt-0.5">
               {currentItem.title}
             </h3>
             <p className="text-xs text-stone-600 mt-1 max-w-2xl">

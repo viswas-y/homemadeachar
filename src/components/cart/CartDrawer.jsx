@@ -30,7 +30,7 @@ export default function CartDrawer() {
     <>
       {/* Backdrop */}
       <div
-        className="fixed inset-0 z-50 bg-[#221610]/50 backdrop-blur-xs transition-opacity"
+        className="fixed inset-0 z-50 bg-[#1C1917]/50 backdrop-blur-xs transition-opacity"
         onClick={closeCart}
         aria-hidden="true"
       />
@@ -40,13 +40,13 @@ export default function CartDrawer() {
         role="dialog"
         aria-modal="true"
         aria-label="Your Shopping Cart"
-        className="fixed inset-y-0 right-0 z-50 w-full max-w-md bg-[#FBF8F1] shadow-2xl flex flex-col border-l border-black/10"
+        className="fixed inset-y-0 right-0 z-50 w-full max-w-md bg-[#F7F7F5] shadow-2xl flex flex-col border-l border-black/10"
       >
         {/* Drawer Header */}
         <div className="p-5 border-b border-black/10 flex items-center justify-between bg-white">
           <div className="flex items-center gap-2">
-            <ShoppingBag className="w-5 h-5 text-[#221610]" />
-            <h3 className="font-display font-extrabold text-xl text-[#221610] uppercase">
+            <ShoppingBag className="w-5 h-5 text-[#1C1917]" />
+            <h3 className="font-display font-extrabold text-xl text-[#1C1917] uppercase">
               Cart ({totalItems})
             </h3>
           </div>
@@ -55,7 +55,7 @@ export default function CartDrawer() {
             type="button"
             onClick={closeCart}
             aria-label="Close cart"
-            className="p-1.5 text-[#221610]/60 hover:text-[#221610] transition-colors"
+            className="p-1.5 text-[#1C1917]/60 hover:text-[#1C1917] transition-colors"
           >
             <X className="w-5 h-5" />
           </button>
@@ -63,7 +63,7 @@ export default function CartDrawer() {
 
         {/* Free Shipping Note */}
         {cart.length > 0 && (
-          <div className="px-5 py-2.5 bg-[#FAD051]/30 border-b border-black/10 text-xs text-[#221610] font-semibold">
+          <div className="px-5 py-2.5 bg-[#EDF5EE] border-b border-[#146B2E]/15 text-xs text-[#146B2E] font-semibold">
             {remainingForFreeShipping === 0 ? (
               <span>Your order qualifies for free delivery across India!</span>
             ) : (
@@ -76,16 +76,16 @@ export default function CartDrawer() {
         <div className="flex-1 overflow-y-auto px-5 divide-y divide-black/10">
           {cart.length === 0 ? (
             <div className="h-full flex flex-col items-center justify-center text-center py-16 px-4 space-y-4">
-              <h4 className="font-display text-2xl font-extrabold text-[#221610] uppercase">
+              <h4 className="font-display text-2xl font-extrabold text-[#1C1917] uppercase">
                 Your cart is empty
               </h4>
-              <p className="text-xs text-[#221610]/70 max-w-xs font-medium">
+              <p className="text-xs text-[#1C1917]/70 max-w-xs font-medium">
                 Explore our small-batch Kerala achars made with cold-pressed oil and roasted spices.
               </p>
               <button
                 type="button"
                 onClick={closeCart}
-                className="rounded-full bg-[#221610] hover:bg-black text-white px-6 py-2.5 text-xs font-bold tracking-wide transition-colors"
+                className="rounded-full bg-[#16692B] hover:bg-[#115221] text-white px-6 py-2.5 text-xs font-bold tracking-wide transition-colors"
               >
                 Explore Pickles
               </button>
@@ -106,21 +106,21 @@ export default function CartDrawer() {
         {cart.length > 0 && (
           <div className="p-5 border-t border-black/10 bg-white space-y-3">
             <div className="space-y-1.5 text-xs font-medium">
-              <div className="flex justify-between text-[#221610]/70">
+              <div className="flex justify-between text-[#1C1917]/70">
                 <span>Subtotal</span>
-                <span className="font-bold text-[#221610]">{formatINR(subtotal)}</span>
+                <span className="font-bold text-[#1C1917]">{formatINR(subtotal)}</span>
               </div>
-              <div className="flex justify-between text-[#221610]/70">
+              <div className="flex justify-between text-[#1C1917]/70">
                 <span>Delivery</span>
-                <span className="font-bold text-[#221610]">
+                <span className="font-bold text-[#1C1917]">
                   {shippingFee === 0 ? 'Free' : formatINR(shippingFee)}
                 </span>
               </div>
               <div className="pt-2 border-t border-black/10 flex justify-between items-baseline">
-                <span className="font-display font-extrabold text-base text-[#221610] uppercase">
+                <span className="font-display font-extrabold text-base text-[#1C1917] uppercase">
                   Total
                 </span>
-                <span className="font-display font-extrabold text-2xl text-[#221610]">
+                <span className="font-display font-extrabold text-2xl text-[#1C1917]">
                   {formatINR(total)}
                 </span>
               </div>
@@ -130,7 +130,7 @@ export default function CartDrawer() {
               <button
                 type="button"
                 onClick={() => setIsCheckoutOpen(true)}
-                className="w-full rounded-full bg-[#221610] hover:bg-black text-white py-3.5 px-4 text-xs font-extrabold tracking-wide flex items-center justify-center gap-2 transition-colors uppercase shadow-sm"
+                className="w-full rounded-full bg-[#16692B] hover:bg-[#115221] text-white py-3.5 px-4 text-xs font-extrabold tracking-wide flex items-center justify-center gap-2 transition-colors uppercase shadow-sm"
               >
                 <span>Checkout via WhatsApp</span>
                 <ArrowRight className="w-4 h-4" />

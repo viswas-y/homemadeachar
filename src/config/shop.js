@@ -5,9 +5,9 @@
  */
 export const SHOP_CONFIG = {
   // Brand details
-  name: "Home Made Achar",
-  malayalamName: "ഹോം മെയ്ഡ് അച്ചാർ",
-  tagline: "Homemade Kerala achar, made in small batches.",
+  name: "The Spice Jar",
+  malayalamName: "ദി സ്പൈസ് ജാർ",
+  tagline: "Spice up your life — Handpicked quality Kerala achar.",
   subTagline: "Handcrafted with heirloom recipes, cold-pressed gingelly oil & zero preservatives.",
   
   // Kitchen Maker
@@ -21,7 +21,7 @@ export const SHOP_CONFIG = {
   
   // Kitchen Location
   address: {
-    line1: "Home Made Achar Kitchen",
+    line1: "The Spice Jar Kitchen",
     line2: "Valoringal, Wandoor",
     city: "Malappuram",
     state: "Kerala",
@@ -35,8 +35,8 @@ export const SHOP_CONFIG = {
 
   // Social Links
   socials: {
-    instagram: "https://instagram.com/homemade_achar",
-    facebook: "https://facebook.com/homemadeachar",
+    instagram: "https://instagram.com/thespicejar",
+    facebook: "https://facebook.com/thespicejar",
     whatsapp: "https://wa.me/919778726659"
   },
 

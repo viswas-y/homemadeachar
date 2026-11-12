@@ -7,7 +7,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer id="contact" className="mt-8 bg-[#221610] text-[#FBF8F1] pt-16 pb-12">
+    <footer id="contact" className="mt-8 bg-[#0B3D1A] text-[#F7F7F5] pt-16 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         
         {/* Main Footer Row */}
@@ -15,23 +15,32 @@ export default function Footer() {
           
           {/* Brand Info */}
           <div className="lg:col-span-5 space-y-3">
-            <h3 className="font-display text-2xl sm:text-3xl font-extrabold uppercase tracking-tight text-[#FAD051]">
-              {SHOP_CONFIG.name}
-            </h3>
-            <p className="text-xs font-semibold text-white/70">
-              {SHOP_CONFIG.malayalamName}
-            </p>
-            <p className="text-xs sm:text-sm text-white/80 leading-relaxed max-w-sm">
+            <div className="flex items-center gap-3.5">
+              <img
+                src="/images/logo.jpg"
+                alt={`${SHOP_CONFIG.name} emblem`}
+                className="w-14 h-14 rounded-full bg-white p-0.5 object-cover shadow-sm shrink-0"
+              />
+              <div>
+                <h3 className="font-display text-2xl sm:text-3xl font-extrabold uppercase tracking-tight text-[#BEF264] leading-none">
+                  {SHOP_CONFIG.name}
+                </h3>
+                <p className="text-xs font-semibold text-white/75 mt-1">
+                  {SHOP_CONFIG.malayalamName}
+                </p>
+              </div>
+            </div>
+            <p className="text-xs sm:text-sm text-white/80 leading-relaxed max-w-sm pt-1">
               {SHOP_CONFIG.tagline} Handcrafted in small batches with cold-pressed gingelly oil, fresh garden spices, and zero preservatives.
             </p>
-            <div className="pt-2 text-xs text-white/50">
+            <div className="pt-1 text-xs text-white/55">
               FSSAI Lic. No: {SHOP_CONFIG.fssaiNumber}
             </div>
           </div>
 
           {/* Quick Links */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-xs uppercase tracking-widest font-extrabold text-[#FAD051]">
+            <h4 className="text-xs uppercase tracking-widest font-extrabold text-[#BEF264]">
               Quick Links
             </h4>
             <ul className="space-y-2 text-xs sm:text-sm text-white/80">
@@ -55,7 +64,7 @@ export default function Footer() {
 
           {/* Contact Details */}
           <div className="lg:col-span-4 space-y-3">
-            <h4 className="text-xs uppercase tracking-widest font-extrabold text-[#FAD051]">
+            <h4 className="text-xs uppercase tracking-widest font-extrabold text-[#BEF264]">
               Kitchen & Orders
             </h4>
             <div className="space-y-1.5 text-xs sm:text-sm text-white/80">
@@ -77,7 +86,7 @@ export default function Footer() {
                 href={SHOP_CONFIG.socials.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#FAD051] hover:text-[#221610] flex items-center justify-center transition-colors"
+                className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#BEF264] hover:text-[#0B3D1A] flex items-center justify-center transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="w-4 h-4" />
@@ -86,7 +95,7 @@ export default function Footer() {
                 href={SHOP_CONFIG.socials.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#FAD051] hover:text-[#221610] flex items-center justify-center transition-colors"
+                className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#BEF264] hover:text-[#0B3D1A] flex items-center justify-center transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook className="w-4 h-4" />
@@ -95,7 +104,7 @@ export default function Footer() {
                 href={`https://wa.me/${SHOP_CONFIG.whatsappNumber}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#FAD051] hover:text-[#221610] flex items-center justify-center transition-colors"
+                className="w-8 h-8 rounded-full bg-white/10 hover:bg-[#BEF264] hover:text-[#0B3D1A] flex items-center justify-center transition-colors"
                 aria-label="WhatsApp"
               >
                 <MessageCircle className="w-4 h-4" />
