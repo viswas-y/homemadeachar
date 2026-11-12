@@ -1,5 +1,4 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
 import Carousel from './Carousel.jsx';
 import { PRODUCTS } from '../../data/products.js';
 
@@ -11,51 +10,52 @@ export default function Hero() {
 
   return (
     <section
-      aria-label="The Spice Jar Featured Showcase"
+      aria-label="The Spice Jar Interactive Hero Showcase"
       className="px-2.5 sm:px-6 lg:px-8 pt-1.5 sm:pt-3"
     >
       <div
-        className="max-w-6xl mx-auto rounded-[22px] sm:rounded-[30px] bg-[#0E7124] px-4 py-5 sm:px-8 sm:py-7 lg:px-10 lg:py-9 relative overflow-hidden shadow-sm border border-[#0B5A1C]"
+        className="max-w-6xl mx-auto rounded-[24px] sm:rounded-[34px] px-4 py-6 sm:px-8 sm:py-9 lg:px-10 lg:py-10 relative overflow-hidden shadow-xl border border-[#14532D]"
         style={{
-          backgroundImage:
-            'linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px)',
-          backgroundSize: '40px 40px',
+          background:
+            'radial-gradient(circle at 50% 42%, #0E3F20 0%, #072411 65%, #04170B 100%)',
         }}
       >
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 lg:gap-8 items-center">
+        {/* Subtle Editorial Grid Texture */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 pointer-events-none opacity-45"
+          style={{
+            backgroundImage:
+              'linear-gradient(to right, rgba(255,255,255,0.035) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.035) 1px, transparent 1px)',
+            backgroundSize: '44px 44px',
+          }}
+        />
 
-          {/* Left Column: Crisp Bold Headline, Subhead & Pill CTA */}
-          <div className="lg:col-span-6 space-y-1 sm:space-y-2.5 text-left z-10">
-            <p className="text-[8.5px] sm:text-[11px] uppercase tracking-widest font-extrabold text-[#BEF264]">
-              SPICE UP YOUR LIFE • HANDPICKED QUALITY.
-            </p>
+        {/* Compact Centered Brand Headline */}
+        <div className="relative z-10 text-center max-w-2xl mx-auto space-y-1.5 sm:space-y-2 animate-hero-enter">
+          <p className="text-[9.5px] sm:text-[11px] uppercase tracking-[0.22em] font-extrabold text-[#BEF264]">
+            SPICE UP YOUR LIFE • HANDPICKED QUALITY
+          </p>
 
-            <h1 className="font-display text-[22px] sm:text-3xl lg:text-[42px] font-extrabold tracking-tight text-white uppercase leading-[0.96]">
-              SPICE SMARTER<br />
-              LIVE TASTIER
-            </h1>
+          <h1 className="font-display text-2xl sm:text-4xl lg:text-[44px] font-extrabold tracking-tight text-white uppercase leading-[0.98]">
+            SPICE SMARTER, LIVE TASTIER
+          </h1>
 
-            <p className="text-[10.5px] sm:text-sm text-white/90 max-w-sm font-medium leading-snug sm:leading-relaxed">
-              Traditional Kerala achar crafted in small kitchen batches with unrefined sea salt, sun-cured spices, and pure cold-pressed gingelly oil. Good for your meal, better for your day.
-            </p>
+          <p className="text-[11px] sm:text-sm text-white/80 max-w-lg mx-auto font-medium leading-snug sm:leading-relaxed">
+            Small-batch Kerala achar crafted in our kitchen with unrefined rock salt, sun-cured spices, and pure cold-pressed gingelly oil.
+            <button
+              type="button"
+              onClick={scrollToShop}
+              className="ml-1.5 text-[#BEF264] hover:underline font-bold focus-visible:outline-none rounded"
+            >
+              Browse all jars →
+            </button>
+          </p>
+        </div>
 
-            <div className="pt-0.5 sm:pt-1.5">
-              <button
-                type="button"
-                onClick={scrollToShop}
-                className="rounded-full bg-white hover:bg-[#EDF5EE] text-[#146B2E] px-4 py-1.5 sm:px-6 sm:py-2.5 text-[10.5px] sm:text-xs font-extrabold tracking-wide inline-flex items-center gap-1.5 sm:gap-2 shadow-sm transition-all active:scale-95"
-              >
-                <span>Shop now</span>
-                <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
-              </button>
-            </div>
-          </div>
-
-          {/* Right Column: Compact Framed Pickle Poster Carousel */}
-          <div className="lg:col-span-6 flex items-center justify-center relative">
-            <Carousel products={PRODUCTS} />
-          </div>
-
+        {/* Interactive Tigris-Style Floating Jar & Flavor Selector */}
+        <div className="relative z-10 mt-2 sm:mt-4">
+          <Carousel products={PRODUCTS} />
         </div>
       </div>
     </section>

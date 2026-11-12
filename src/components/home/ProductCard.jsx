@@ -17,7 +17,7 @@ export default function ProductCard({ product }) {
       {/* Studio Neutral Portrait Card Frame (Millnadan Style) */}
       <Link
         to={`/product/${product.slug}`}
-        className="relative block aspect-[4/4.6] rounded-2xl overflow-hidden bg-[#ECECE8] border border-stone-200/70 shadow-xs group-hover:shadow-md transition-all duration-200 focus-visible:outline-none"
+        className="relative block aspect-[4/4.6] rounded-2xl overflow-hidden bg-[#072411] border border-stone-200/70 shadow-xs group-hover:shadow-md transition-all duration-200 focus-visible:outline-none"
       >
         {/* Top-Left Stacked Minimal Callout Badges */}
         <div className="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 z-10 flex flex-col items-start gap-1.5 pointer-events-none">

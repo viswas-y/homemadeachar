@@ -4,31 +4,21 @@ import { ShoppingBag, Menu, X, MessageCircle } from 'lucide-react';
 import { useCart } from '../../context/CartContext.jsx';
 import { SHOP_CONFIG } from '../../config/shop.js';
 
-export function BrandLogoMark({ inverted = false }) {
-  const textColor = inverted ? 'text-white' : 'text-[#9B0B0B]';
-  const subtitleBorder = inverted
-    ? 'border-white/50 text-[#BEF264]'
-    : 'border-[#146B2E]/30 text-[#146B2E]';
-  const ringStyle = inverted
-    ? 'bg-white p-0.5 border-white/80 shadow-md'
-    : 'bg-white border-stone-200/90 shadow-xs';
+export function BrandLogoMark({ compact = false, inverted = false }) {
+  const sizeClasses = compact
+    ? 'w-11 h-11 sm:w-12 sm:h-12'
+    : 'w-[76px] h-[76px] sm:w-[88px] sm:h-[88px]';
+  const ringStyle = inverted ? 'bg-white shadow-md ring-2 ring-white/80' : 'bg-white';
 
   return (
-    <span className="inline-flex items-center gap-2.5 sm:gap-3 select-none">
+    <span
+      className={`inline-flex items-center justify-center rounded-full overflow-hidden shrink-0 select-none transition-all duration-300 ease-out ${sizeClasses} ${ringStyle}`}
+    >
       <img
         src="/images/logo.jpg"
         alt={`${SHOP_CONFIG.name} — Spice Up Your Life, Handpicked Quality`}
-        className={`w-11 h-11 sm:w-14 sm:h-14 rounded-full object-cover border shrink-0 ${ringStyle}`}
+        className="w-full h-full object-cover scale-[1.30] pointer-events-none"
       />
-
-      <span className="flex flex-col items-start leading-none">
-        <span className={`font-display text-[16px] sm:text-[20px] font-extrabold tracking-tight uppercase ${textColor}`}>
-          {SHOP_CONFIG.name}
-        </span>
-        <span className={`text-[9px] sm:text-[10px] font-bold tracking-widest uppercase border rounded-full px-2 py-0.5 mt-1 ${subtitleBorder}`}>
-          Handpicked Quality
-        </span>
-      </span>
     </span>
   );
 }
@@ -92,17 +82,17 @@ export default function Header() {
         >
           <div
             className={`max-w-7xl mx-auto flex items-center justify-between transition-all duration-300 ${
-              isScrolled ? 'h-14 sm:h-16' : 'h-16 sm:h-20'
+              isScrolled ? 'h-14 sm:h-16' : 'h-[92px] sm:h-[104px]'
             }`}
           >
             {/* Left Brand Logo */}
             <Link
               to="/"
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="focus-visible:outline-none rounded-xl"
+              className="focus-visible:outline-none rounded-full"
               aria-label={`${SHOP_CONFIG.name} Home`}
             >
-              <BrandLogoMark />
+              <BrandLogoMark compact={isScrolled} />
             </Link>
 
             {/* Center Navigation Links (Desktop) */}
@@ -242,8 +232,8 @@ export default function Header() {
         )}
       </div>
 
-      {/* Layout Spacer matching un-scrolled announcement strip (h-8) + navbar (h-16 sm:h-20) */}
-      <div className="h-24 sm:h-28" aria-hidden="true" />
+      {/* Layout Spacer matching un-scrolled announcement strip (h-8) + navbar (h-[92px] sm:h-[104px]) */}
+      <div className="h-[124px] sm:h-[136px]" aria-hidden="true" />
     </>
   );
 }
