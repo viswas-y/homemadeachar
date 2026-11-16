@@ -7,7 +7,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer id="contact" className="mt-8 bg-[#2B0303] text-[#FAF7F2] pt-16 pb-12">
+    <footer id="contact" className="mt-8 bg-[#2B0303] text-[#FAF7F2] pt-16 pb-24 sm:pb-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         
         {/* Main Footer Row */}

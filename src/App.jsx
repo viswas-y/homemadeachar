@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './context/CartContext.jsx';
 import Header from './components/common/Header.jsx';
 import Footer from './components/common/Footer.jsx';
+import BottomNav from './components/common/BottomNav.jsx';
 import CartDrawer from './components/cart/CartDrawer.jsx';
 import Toast from './components/common/Toast.jsx';
 import HomePage from './pages/HomePage.jsx';
@@ -31,7 +32,8 @@ export default function App() {
           {/* Footer (Flat deep leaf green) */}
           <Footer />
 
-          {/* Global Overlays */}
+          {/* Global Overlays & Floating Navigation */}
+          <BottomNav />
           <CartDrawer />
           <Toast />
         </div>

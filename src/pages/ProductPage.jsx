@@ -282,43 +282,7 @@ export default function ProductPage() {
 
       </div>
 
-      {/* Sticky Bottom Bar (matching Model Image) */}
-      <aside
-        aria-label="Quick order bar"
-        className="fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-md border-t border-stone-200/90 py-3 px-4 sm:px-8 shadow-[0_-4px_25px_rgba(0,0,0,0.08)]"
-      >
-        <div className="max-w-7xl mx-auto flex items-center justify-between gap-3 sm:gap-6">
-          {/* Price Column */}
-          <div className="flex flex-col shrink-0">
-            <span className="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wider text-stone-500 leading-none">
-              PRICE
-            </span>
-            <span className="font-display font-extrabold text-xl sm:text-2xl text-black leading-tight mt-0.5">
-              {formatINR(currentPrice)}
-            </span>
-          </div>
-
-          {/* Quick Action Buttons */}
-          <div className="flex items-center gap-2.5 sm:gap-3 flex-1 max-w-sm sm:max-w-md ml-auto">
-            <button
-              type="button"
-              onClick={handleAddToCart}
-              className="flex-1 rounded-xl sm:rounded-2xl border-2 border-black bg-white hover:bg-stone-50 text-black py-2.5 sm:py-3 px-3 text-xs sm:text-sm font-extrabold transition-all active:scale-95 text-center whitespace-nowrap"
-            >
-              Add to cart
-            </button>
-            <button
-              type="button"
-              onClick={handleBuyNow}
-              className="flex-1 rounded-xl sm:rounded-2xl border-2 border-black bg-black hover:bg-stone-900 text-white py-2.5 sm:py-3 px-3 text-xs sm:text-sm font-extrabold transition-all active:scale-95 text-center whitespace-nowrap"
-            >
-              Buy now
-            </button>
-          </div>
-        </div>
-      </aside>
-
-      {/* Floating WhatsApp Action Button (matching Model Image) */}
+      {/* Floating WhatsApp Action Button */}
       <a
         href={`https://wa.me/${SHOP_CONFIG.whatsappNumber}?text=${encodeURIComponent(
           `Hello Valsala Amma, I would like to order ${product.name} (${selectedSize.size}).`
@@ -326,7 +290,7 @@ export default function ProductPage() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat with Valsala Amma on WhatsApp"
-        className="fixed right-4 bottom-20 sm:bottom-24 z-40 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white flex items-center justify-center shadow-lg hover:scale-105 active:scale-95 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2"
+        className="fixed right-4 bottom-20 sm:bottom-24 z-30 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white flex items-center justify-center shadow-lg hover:scale-105 active:scale-95 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2"
       >
         <svg
           viewBox="0 0 24 24"
