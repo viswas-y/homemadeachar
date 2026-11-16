@@ -100,12 +100,24 @@ export default function Lightbox({ items, currentIndex, isOpen, onClose, onNavig
         onTouchEnd={onTouchEndHandler}
       >
         <div className="w-full flex justify-center overflow-hidden rounded-2xl bg-stone-900 border border-white/10 shadow-2xl">
-          <img
-            src={currentItem.image}
-            alt={currentItem.title}
-            className="max-h-[65vh] w-auto object-contain select-none"
-            draggable="false"
-          />
+          {currentItem.video ? (
+            <video
+              key={currentItem.video}
+              src={currentItem.video}
+              poster={currentItem.image}
+              controls
+              autoPlay
+              playsInline
+              className="max-h-[65vh] w-auto max-w-full object-contain select-none rounded-xl"
+            />
+          ) : (
+            <img
+              src={currentItem.image}
+              alt={currentItem.title}
+              className="max-h-[65vh] w-auto object-contain select-none"
+              draggable="false"
+            />
+          )}
         </div>
 
         <div className="w-full mt-4 bg-white text-stone-950 p-5 rounded-2xl border border-black/10 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-4">

@@ -25,20 +25,41 @@ export default function Gallery() {
             <div
               key={item.id}
               onClick={() => setSelectedPhotoIndex(index)}
-              className="bg-[#FAF7F2] rounded-2xl overflow-hidden cursor-pointer group hover:-translate-y-1 transition-all duration-200 border border-stone-200/80 hover:border-[#9B0B0B]/35 p-2.5 sm:p-3 flex flex-col"
+              className="bg-[#FAF7F2] rounded-2xl overflow-hidden cursor-pointer group hover:-translate-y-1 transition-all duration-200 border border-stone-200/80 hover:border-[#9B0B0B]/35 p-2.5 sm:p-3 flex flex-col shadow-xs hover:shadow-md"
             >
-              <div className="relative aspect-square w-full overflow-hidden rounded-xl bg-stone-200">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  loading="lazy"
-                  className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-300"
-                />
+              <div className="relative aspect-square w-full overflow-hidden rounded-xl bg-stone-900">
+                {item.video ? (
+                  <video
+                    src={item.video}
+                    poster={item.image}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                    className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-300"
+                  />
+                ) : (
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    loading="lazy"
+                    className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-300"
+                  />
+                )}
+
+                {/* Subtle Video Pill Badge */}
+                {item.video && (
+                  <div className="absolute top-2.5 right-2.5 z-10 flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-xs text-white text-[10px] font-bold shadow-xs pointer-events-none">
+                    <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
+                    <span>VIDEO</span>
+                  </div>
+                )}
               </div>
 
               <div className="pt-2.5 sm:pt-3 text-[#1C1917] flex-1 flex flex-col justify-between">
                 <div>
-                  <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#1C1917]/50 block">
+                  <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[#9B0B0B] block">
                     {item.step}
                   </span>
                   <h3 className="font-display text-xs sm:text-sm font-bold text-[#1C1917] mt-0.5 truncate">

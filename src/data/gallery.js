@@ -12,6 +12,7 @@ export const GALLERY_ITEMS = [
     caption: "Early morning harvest of crisp green mangoes cured and blended in rich traditional Kerala achar masala.",
     step: "01. Preparation",
     image: "/images/gallery/mango-bowl-prep.jpg",
+    video: "/videos/Kothi_01_Preparation.mp4",
     aspect: "square"
   },
   {
@@ -21,6 +22,7 @@ export const GALLERY_ITEMS = [
     caption: "Fresh mango slices dusted with turmeric and crystal salt laid out on clean cotton cloth beside ceramic bharanis.",
     step: "02. Natural Curing",
     image: "/images/gallery/sun-drying-mangoes.jpg",
+    video: "/videos/Kothi_02_Natural_Curing.mp4",
     aspect: "square"
   },
   {
@@ -30,6 +32,7 @@ export const GALLERY_ITEMS = [
     caption: "Whole garlic, chillies, and country spices simmered slowly in a traditional earthen clay pot for rich homestyle aroma.",
     step: "03. Slow Cooking",
     image: "/images/gallery/claypot-cooking.jpg",
+    video: "/videos/Kothi_03_Slow_Cooking.mp4",
     aspect: "square"
   },
   {
@@ -39,6 +42,7 @@ export const GALLERY_ITEMS = [
     caption: "Roasted red chillies, mustard seeds, and cold-pressed gingelly oil poured aromatic and hot in small kitchen batches.",
     step: "04. Tempering",
     image: "/images/gallery/spice-tempering.jpg",
+    video: "/videos/Kothi_04_Tempering.mp4",
     aspect: "square"
   },
   {
@@ -48,6 +52,7 @@ export const GALLERY_ITEMS = [
     caption: "Fresh gooseberry and citrus pickles rested in traditional stoneware bharanis before carefully filling each glass jar.",
     step: "05. Jar Packing",
     image: "/images/gallery/bharani-jar-packing.jpg",
+    video: "/videos/Kothi_05_Jar_Packing.mp4",
     aspect: "square"
   },
   {
@@ -57,6 +62,7 @@ export const GALLERY_ITEMS = [
     caption: "Fresh small batches of Garlic, Date-Lemon, Kanthari, Nellika, Pavakka, and Mango achar sealed and ready to ship.",
     step: "06. Ready to Ship",
     image: "/images/gallery/ready-jars-collection.jpg",
+    video: "/videos/Kothi_06_Ready_To_Ship.mp4",
     aspect: "square"
   }
 ];
