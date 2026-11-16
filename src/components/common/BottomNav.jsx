@@ -7,10 +7,18 @@ import SearchModal from './SearchModal.jsx';
 export default function BottomNav() {
   const location = useLocation();
   const navigate = useNavigate();
-  const { totalItems, setIsCartOpen } = useCart();
+  const { totalItems, openCart, setIsCartOpen } = useCart();
   const [searchOpen, setSearchOpen] = useState(false);
 
   const isHome = location.pathname === '/';
+
+  const handleOpenCart = () => {
+    if (typeof openCart === 'function') {
+      openCart();
+    } else if (typeof setIsCartOpen === 'function') {
+      setIsCartOpen(true);
+    }
+  };
 
   const handleHomeClick = () => {
     if (isHome) {
@@ -106,7 +114,7 @@ export default function BottomNav() {
           {/* 4. Cart (prominent dark capsule matching screenshot) */}
           <button
             type="button"
-            onClick={() => setIsCartOpen(true)}
+            onClick={handleOpenCart}
             className="flex flex-col items-center justify-center gap-1 group focus-visible:outline-none relative active:scale-95 transition-transform"
             aria-label={`Open Cart with ${totalItems} items`}
           >

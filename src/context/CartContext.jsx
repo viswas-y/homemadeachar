@@ -126,6 +126,7 @@ export function CartProvider({ children }) {
         removeFromCart,
         clearCart,
         isCartOpen,
+        setIsCartOpen,
         openCart,
         closeCart,
         toggleCart,

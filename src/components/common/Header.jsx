@@ -24,11 +24,16 @@ export function BrandLogoMark({ compact = false, inverted = false }) {
 }
 
 export default function Header() {
-  const { totalItems, setIsCartOpen } = useCart();
+  const { totalItems, openCart, setIsCartOpen } = useCart();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
+
+  const handleOpenCart = () => {
+    if (typeof openCart === 'function') openCart();
+    else if (typeof setIsCartOpen === 'function') setIsCartOpen(true);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -151,7 +156,7 @@ export default function Header() {
 
               <button
                 type="button"
-                onClick={() => setIsCartOpen(true)}
+                onClick={handleOpenCart}
                 className="relative p-2 text-[#1C1917] hover:text-[#9B0B0B] hover:bg-[#FDF2F2] rounded-full transition-colors"
                 aria-label={`Shopping bag with ${totalItems} items`}
               >
