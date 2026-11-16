@@ -14,6 +14,12 @@ export default function ProductCard({ product }) {
     addToCart(product, selectedSize, 1, false);
   };
 
+  const handleBuyNow = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    addToCart(product, selectedSize, 1, true);
+  };
+
   // Original list price before kitchen direct savings (shows strike-through like reference card)
   const originalPrice = Math.round(selectedSize.price * 1.25);
 
@@ -92,16 +98,29 @@ export default function ProductCard({ product }) {
           </span>
         </div>
 
-        {/* + Add to cart Button (matching reference card) */}
-        <button
-          type="button"
-          onClick={handleAddToCart}
-          aria-label={`Add ${product.name} ${selectedSize.size} to cart`}
-          className="mt-3 w-full rounded-xl sm:rounded-2xl bg-[#1C1917] hover:bg-[#9B0B0B] text-white font-extrabold py-2.5 sm:py-3 text-xs sm:text-sm tracking-wide shadow-xs transition-all active:scale-95 flex items-center justify-center gap-1.5"
-        >
-          <Plus className="w-4 h-4 stroke-[2.5]" />
-          <span>Add to cart</span>
-        </button>
+        {/* Action Buttons: Add to cart & Buy now */}
+        <div className="mt-3 flex flex-col gap-1.5 sm:gap-2">
+          {/* Add to cart: White with black border */}
+          <button
+            type="button"
+            onClick={handleAddToCart}
+            aria-label={`Add ${product.name} ${selectedSize.size} to cart`}
+            className="w-full rounded-xl sm:rounded-2xl border-2 border-[#1C1917] bg-white hover:bg-stone-50 text-[#1C1917] font-extrabold py-2 sm:py-2.5 px-2 text-xs sm:text-sm tracking-wide shadow-xs transition-all active:scale-95 flex items-center justify-center gap-1.5"
+          >
+            <Plus className="w-3.5 h-3.5 stroke-[2.5]" />
+            <span>Add to cart</span>
+          </button>
+
+          {/* Buy now: Solid Black / Brand Crimson */}
+          <button
+            type="button"
+            onClick={handleBuyNow}
+            aria-label={`Buy ${product.name} ${selectedSize.size} now`}
+            className="w-full rounded-xl sm:rounded-2xl border-2 border-[#1C1917] bg-[#1C1917] hover:bg-[#9B0B0B] hover:border-[#9B0B0B] text-white font-extrabold py-2 sm:py-2.5 px-2 text-xs sm:text-sm tracking-wide shadow-xs transition-all active:scale-95 flex items-center justify-center"
+          >
+            Buy now
+          </button>
+        </div>
       </div>
     </article>
   );
