@@ -23,7 +23,7 @@ export default function ProductGrid({ products = [] }) {
         {/* Clean Millnadan Header & Filter Bar */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8 sm:mb-10">
           <div>
-            <span className="text-[11px] sm:text-xs font-extrabold uppercase tracking-widest text-[#146B2E] block">
+            <span className="text-[11px] sm:text-xs font-extrabold uppercase tracking-widest text-[#9B0B0B] block">
               HOMEMADE KERALA SPECIALTIES
             </span>
             <h2
@@ -44,7 +44,7 @@ export default function ProductGrid({ products = [] }) {
               onClick={() => setFilter('all')}
               className={`px-4 py-2 rounded-full text-xs sm:text-sm font-bold transition-all ${
                 filter === 'all'
-                  ? 'bg-[#146B2E] text-white shadow-xs'
+                  ? 'bg-[#9B0B0B] text-white shadow-xs'
                   : 'bg-[#ECECE8] text-[#1C1917] hover:bg-[#DFDFDA]'
               }`}
             >
@@ -55,7 +55,7 @@ export default function ProductGrid({ products = [] }) {
               onClick={() => setFilter('veg')}
               className={`px-4 py-2 rounded-full text-xs sm:text-sm font-bold transition-all ${
                 filter === 'veg'
-                  ? 'bg-[#146B2E] text-white shadow-xs'
+                  ? 'bg-[#9B0B0B] text-white shadow-xs'
                   : 'bg-[#ECECE8] text-[#1C1917] hover:bg-[#DFDFDA]'
               }`}
             >
@@ -66,7 +66,7 @@ export default function ProductGrid({ products = [] }) {
               onClick={() => setFilter('non-veg')}
               className={`px-4 py-2 rounded-full text-xs sm:text-sm font-bold transition-all ${
                 filter === 'non-veg'
-                  ? 'bg-[#146B2E] text-white shadow-xs'
+                  ? 'bg-[#9B0B0B] text-white shadow-xs'
                   : 'bg-[#ECECE8] text-[#1C1917] hover:bg-[#DFDFDA]'
               }`}
             >

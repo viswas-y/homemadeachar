@@ -21,7 +21,7 @@ export default function SpiceLevel({ level }) {
         return {
           label: 'Mild & Soothing (ലഘുവായ എരിവ്)',
           count: 1,
-          barColor: 'bg-[#146B2E]',
+          barColor: 'bg-[#9B0B0B]',
           desc: 'Gentle warmth with roasted fenugreek, mustard, and fragrant ginger aromatics.'
         };
     }
@@ -30,7 +30,7 @@ export default function SpiceLevel({ level }) {
   const info = getSpiceInfo(level);
 
   return (
-    <div className="p-3.5 rounded-xl bg-[#F7F7F5] border border-stone-200 space-y-2">
+    <div className="p-3.5 rounded-xl bg-[#FAF7F2] border border-stone-200 space-y-2">
       <div className="flex items-center justify-between text-xs font-bold text-stone-700">
         <span className="flex items-center gap-1.5">
           <span aria-hidden="true" className="text-sm">🌶️</span>

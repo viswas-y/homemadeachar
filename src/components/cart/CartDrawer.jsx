@@ -40,7 +40,7 @@ export default function CartDrawer() {
         role="dialog"
         aria-modal="true"
         aria-label="Your Shopping Cart"
-        className="fixed inset-y-0 right-0 z-50 w-full max-w-md bg-[#F7F7F5] shadow-2xl flex flex-col border-l border-black/10"
+        className="fixed inset-y-0 right-0 z-50 w-full max-w-md bg-[#FAF7F2] shadow-2xl flex flex-col border-l border-black/10"
       >
         {/* Drawer Header */}
         <div className="p-5 border-b border-black/10 flex items-center justify-between bg-white">
@@ -63,7 +63,7 @@ export default function CartDrawer() {
 
         {/* Free Shipping Note */}
         {cart.length > 0 && (
-          <div className="px-5 py-2.5 bg-[#EDF5EE] border-b border-[#146B2E]/15 text-xs text-[#146B2E] font-semibold">
+          <div className="px-5 py-2.5 bg-[#FDF2F2] border-b border-[#9B0B0B]/15 text-xs text-[#9B0B0B] font-semibold">
             {remainingForFreeShipping === 0 ? (
               <span>Your order qualifies for free delivery across India!</span>
             ) : (
@@ -85,7 +85,7 @@ export default function CartDrawer() {
               <button
                 type="button"
                 onClick={closeCart}
-                className="rounded-full bg-[#16692B] hover:bg-[#115221] text-white px-6 py-2.5 text-xs font-bold tracking-wide transition-colors"
+                className="rounded-full bg-[#960202] hover:bg-[#7F0B0B] text-white px-6 py-2.5 text-xs font-bold tracking-wide transition-colors"
               >
                 Explore Pickles
               </button>
@@ -130,7 +130,7 @@ export default function CartDrawer() {
               <button
                 type="button"
                 onClick={() => setIsCheckoutOpen(true)}
-                className="w-full rounded-full bg-[#16692B] hover:bg-[#115221] text-white py-3.5 px-4 text-xs font-extrabold tracking-wide flex items-center justify-center gap-2 transition-colors uppercase shadow-sm"
+                className="w-full rounded-full bg-[#960202] hover:bg-[#7F0B0B] text-white py-3.5 px-4 text-xs font-extrabold tracking-wide flex items-center justify-center gap-2 transition-colors uppercase shadow-sm"
               >
                 <span>Checkout via WhatsApp</span>
                 <ArrowRight className="w-4 h-4" />

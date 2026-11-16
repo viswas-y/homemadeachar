@@ -6,7 +6,7 @@ const PURITY_BADGES = [
     label: 'SUPERIOR QUALITY',
     image: '/images/products/mango-pickle.jpg',
     alt: 'The Spice Jar homemade mango achar jar',
-    variant: 'green',
+    variant: 'red',
     shape: 'rounded-[58%_42%_64%_36%/44%_62%_38%_56%]',
   },
   {
@@ -22,7 +22,7 @@ const PURITY_BADGES = [
     label: 'NO CHEMICALS OR PRESERVATIVES',
     image: '/images/sections/ingredient-curry-leaves.jpg',
     alt: 'Fresh Kerala curry leaves with zero preservatives',
-    variant: 'green',
+    variant: 'red',
     shape: 'rounded-[62%_38%_46%_54%/52%_58%_42%_48%]',
   },
   {
@@ -38,7 +38,7 @@ const PURITY_BADGES = [
     label: 'HANDPICKED SPICES',
     image: '/images/sections/ingredient-spices.jpg',
     alt: 'Whole sun-cured Kerala spices and chillies',
-    variant: 'green',
+    variant: 'red',
     shape: 'rounded-[52%_48%_40%_60%/46%_64%_36%_54%]',
   },
   {
@@ -55,20 +55,20 @@ export default function ValueBadges() {
   return (
     <section
       aria-label="Our purity and homemade promises"
-      className="py-10 sm:py-14 px-4 sm:px-8 bg-[#F7F7F5]"
+      className="py-10 sm:py-14 px-4 sm:px-8 bg-[#FAF7F2]"
     >
       <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-x-5 gap-y-9 sm:gap-y-10">
         {PURITY_BADGES.map((badge) => {
-          const isGreen = badge.variant === 'green';
+          const isRed = badge.variant === 'red';
 
           return (
             <div key={badge.id} className="flex flex-col items-center text-center group">
               {/* Organic Asymmetric Pebble Blob Stage (matching Millnadan layout) */}
               <div
                 className={`w-32 h-28 sm:w-36 sm:h-32 p-2.5 sm:p-3 flex items-center justify-center transition-transform duration-300 group-hover:scale-105 ${badge.shape} ${
-                  isGreen
-                    ? 'bg-gradient-to-br from-[#168029] to-[#0B4D18] shadow-md'
-                    : 'bg-white border border-stone-200/80 shadow-sm'
+                  isRed
+                    ? 'bg-gradient-to-br from-[#9B0B0B] to-[#5A0707] shadow-md'
+                    : 'bg-white border border-[#9B0B0B]/15 shadow-sm'
                 }`}
               >
                 <div className="w-full h-full rounded-[inherit] overflow-hidden bg-white/95 flex items-center justify-center">

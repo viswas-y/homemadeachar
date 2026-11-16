@@ -88,7 +88,7 @@ export default function CheckoutModal({ items, subtotal, shippingFee, total, isO
         {!orderSent ? (
           <div>
             <div className="mb-6">
-              <span className="text-[11px] uppercase tracking-wider font-extrabold text-[#146B2E] block mb-1">
+              <span className="text-[11px] uppercase tracking-wider font-extrabold text-[#9B0B0B] block mb-1">
                 KITCHEN DIRECT ORDER
               </span>
               <h3 id="checkout-modal-title" className="font-display font-extrabold text-2xl sm:text-3xl text-[#1C1917] uppercase">
@@ -99,12 +99,12 @@ export default function CheckoutModal({ items, subtotal, shippingFee, total, isO
               </p>
             </div>
 
-            <div className="p-4 mb-6 rounded-2xl bg-[#EDF5EE] border border-[#146B2E]/25 flex items-center justify-between text-xs">
+            <div className="p-4 mb-6 rounded-2xl bg-[#FDF2F2] border border-[#9B0B0B]/25 flex items-center justify-between text-xs">
               <div>
                 <span className="font-extrabold text-[#1C1917] block">
                   {items.length} {items.length === 1 ? 'jar' : 'jars'} selected
                 </span>
-                <span className="text-[#146B2E] font-semibold">
+                <span className="text-[#9B0B0B] font-semibold">
                   {shippingFee === 0 ? 'Free Shipping Included' : `Shipping: ${formatINR(shippingFee)}`}
                 </span>
               </div>
@@ -126,7 +126,7 @@ export default function CheckoutModal({ items, subtotal, shippingFee, total, isO
                   placeholder="e.g. Maya Nair"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl border border-black/15 text-xs text-[#1C1917] bg-[#F7F7F5] focus:bg-white focus:border-[#146B2E]"
+                  className="w-full px-4 py-2.5 rounded-xl border border-black/15 text-xs text-[#1C1917] bg-[#F7F7F5] focus:bg-white focus:border-[#9B0B0B]"
                 />
                 {errors.name && <p className="text-xs text-red-600 mt-1 font-semibold">{errors.name}</p>}
               </div>
@@ -140,7 +140,7 @@ export default function CheckoutModal({ items, subtotal, shippingFee, total, isO
                   placeholder="e.g. 9847012345"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl border border-black/15 text-xs text-[#1C1917] bg-[#F7F7F5] focus:bg-white focus:border-[#146B2E]"
+                  className="w-full px-4 py-2.5 rounded-xl border border-black/15 text-xs text-[#1C1917] bg-[#F7F7F5] focus:bg-white focus:border-[#9B0B0B]"
                 />
                 {errors.phone && <p className="text-xs text-red-600 mt-1 font-semibold">{errors.phone}</p>}
               </div>
@@ -154,7 +154,7 @@ export default function CheckoutModal({ items, subtotal, shippingFee, total, isO
                   placeholder="House/Flat No., Street, Landmark, City & State"
                   value={formData.address}
                   onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl border border-black/15 text-xs text-[#1C1917] bg-[#F7F7F5] focus:bg-white focus:border-[#146B2E]"
+                  className="w-full px-4 py-2.5 rounded-xl border border-black/15 text-xs text-[#1C1917] bg-[#F7F7F5] focus:bg-white focus:border-[#9B0B0B]"
                 ></textarea>
                 {errors.address && <p className="text-xs text-red-600 mt-1 font-semibold">{errors.address}</p>}
               </div>
@@ -170,7 +170,7 @@ export default function CheckoutModal({ items, subtotal, shippingFee, total, isO
                     placeholder="e.g. 682021"
                     value={formData.pincode}
                     onChange={(e) => setFormData({ ...formData, pincode: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl border border-black/15 text-xs text-[#1C1917] bg-[#F7F7F5] focus:bg-white focus:border-[#146B2E]"
+                    className="w-full px-4 py-2.5 rounded-xl border border-black/15 text-xs text-[#1C1917] bg-[#F7F7F5] focus:bg-white focus:border-[#9B0B0B]"
                   />
                   {errors.pincode && <p className="text-xs text-red-600 mt-1 font-semibold">{errors.pincode}</p>}
                 </div>
@@ -184,7 +184,7 @@ export default function CheckoutModal({ items, subtotal, shippingFee, total, isO
                     placeholder="Optional note"
                     value={formData.note}
                     onChange={(e) => setFormData({ ...formData, note: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl border border-black/15 text-xs text-[#1C1917] bg-[#F7F7F5] focus:bg-white focus:border-[#146B2E]"
+                    className="w-full px-4 py-2.5 rounded-xl border border-black/15 text-xs text-[#1C1917] bg-[#F7F7F5] focus:bg-white focus:border-[#9B0B0B]"
                   />
                 </div>
               </div>
@@ -192,7 +192,7 @@ export default function CheckoutModal({ items, subtotal, shippingFee, total, isO
               <div className="pt-3">
                 <button
                   type="submit"
-                  className="w-full rounded-full bg-[#16692B] hover:bg-[#115221] text-white py-3.5 px-6 text-xs font-extrabold uppercase tracking-wide flex items-center justify-center gap-2 transition-colors shadow-sm"
+                  className="w-full rounded-full bg-[#960202] hover:bg-[#7F0B0B] text-white py-3.5 px-6 text-xs font-extrabold uppercase tracking-wide flex items-center justify-center gap-2 transition-colors shadow-sm"
                 >
                   <span>Place Order on WhatsApp ({formatINR(total)})</span>
                   <ArrowRight className="w-4 h-4" />
@@ -203,12 +203,12 @@ export default function CheckoutModal({ items, subtotal, shippingFee, total, isO
         ) : (
           /* Order Placed Success Confirmation */
           <div className="text-center py-6 space-y-4">
-            <div className="w-14 h-14 rounded-full bg-[#146B2E] flex items-center justify-center mx-auto text-white">
+            <div className="w-14 h-14 rounded-full bg-[#9B0B0B] flex items-center justify-center mx-auto text-white">
               <Check className="w-8 h-8 stroke-[3]" />
             </div>
 
             <div>
-              <span className="text-[11px] uppercase tracking-wider font-extrabold text-[#146B2E] block">
+              <span className="text-[11px] uppercase tracking-wider font-extrabold text-[#9B0B0B] block">
                 ORDER DISPATCHED TO WHATSAPP
               </span>
               <h3 className="font-display font-extrabold text-2xl sm:text-3xl text-[#1C1917] uppercase mt-1">
@@ -222,7 +222,7 @@ export default function CheckoutModal({ items, subtotal, shippingFee, total, isO
             <div className="p-4 rounded-2xl bg-[#F7F7F5] border border-black/10 text-left text-xs text-[#1C1917] space-y-1.5 max-w-sm mx-auto font-medium">
               <div className="flex justify-between font-extrabold text-sm">
                 <span>Total Payable:</span>
-                <span className="font-display text-[#146B2E]">{formatINR(placedSnapshot?.total)}</span>
+                <span className="font-display text-[#9B0B0B]">{formatINR(placedSnapshot?.total)}</span>
               </div>
               <div className="flex justify-between">
                 <span>Address:</span>
@@ -234,7 +234,7 @@ export default function CheckoutModal({ items, subtotal, shippingFee, total, isO
               <button
                 type="button"
                 onClick={handleClose}
-                className="rounded-full bg-[#16692B] hover:bg-[#115221] text-white px-7 py-3 text-xs font-extrabold uppercase tracking-wide transition-colors"
+                className="rounded-full bg-[#960202] hover:bg-[#7F0B0B] text-white px-7 py-3 text-xs font-extrabold uppercase tracking-wide transition-colors"
               >
                 Back to Shop
               </button>

@@ -11,7 +11,7 @@ export default function Gallery() {
         
         {/* Section Header */}
         <div className="mb-6 sm:mb-8 text-center sm:text-left">
-          <p className="text-[11px] sm:text-xs uppercase tracking-widest font-extrabold text-[#146B2E]">
+          <p className="text-[11px] sm:text-xs uppercase tracking-widest font-extrabold text-[#9B0B0B]">
             HOW WE MAKE IT
           </p>
           <h2 className="font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-[#1C1917] uppercase mt-0.5">
@@ -25,7 +25,7 @@ export default function Gallery() {
             <div
               key={item.id}
               onClick={() => setSelectedPhotoIndex(index)}
-              className="bg-[#F7F7F5] rounded-2xl overflow-hidden cursor-pointer group hover:-translate-y-1 transition-all duration-200 border border-stone-200/80 hover:border-[#146B2E]/35 p-2.5 sm:p-3 flex flex-col"
+              className="bg-[#FAF7F2] rounded-2xl overflow-hidden cursor-pointer group hover:-translate-y-1 transition-all duration-200 border border-stone-200/80 hover:border-[#9B0B0B]/35 p-2.5 sm:p-3 flex flex-col"
             >
               <div className="relative aspect-square w-full overflow-hidden rounded-xl bg-stone-200">
                 <img

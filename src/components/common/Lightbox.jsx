@@ -110,7 +110,7 @@ export default function Lightbox({ items, currentIndex, isOpen, onClose, onNavig
 
         <div className="w-full mt-4 bg-white text-stone-950 p-5 rounded-2xl border border-black/10 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
-            <span className="text-[11px] uppercase font-bold tracking-wider text-[#146B2E] block">
+            <span className="text-[11px] uppercase font-bold tracking-wider text-[#9B0B0B] block">
               {currentItem.step} • {currentItem.malayalam}
             </span>
             <h3 className="font-display font-bold text-xl text-[#1C1917] mt-0.5">

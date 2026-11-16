@@ -4,7 +4,7 @@ import { SHOP_CONFIG } from '../../config/shop.js';
 export default function About() {
   return (
     <section id="about" className="px-3 sm:px-6 lg:px-8 py-4 sm:py-8">
-      <div className="max-w-7xl mx-auto rounded-[28px] sm:rounded-[36px] bg-[#EDF5EE] border border-[#146B2E]/15 p-6 sm:p-12 lg:p-16 relative overflow-hidden shadow-xs text-[#1C1917]">
+      <div className="max-w-7xl mx-auto rounded-[28px] sm:rounded-[36px] bg-[#FDF6F4] border border-[#9B0B0B]/15 p-6 sm:p-12 lg:p-16 relative overflow-hidden shadow-xs text-[#1C1917]">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
           
@@ -23,7 +23,7 @@ export default function About() {
           {/* Right Column: Brand Story */}
           <div className="lg:col-span-7 space-y-4 sm:space-y-5">
             <div>
-              <p className="text-[11px] sm:text-xs uppercase tracking-widest font-extrabold text-[#146B2E]">
+              <p className="text-[11px] sm:text-xs uppercase tracking-widest font-extrabold text-[#9B0B0B]">
                 THE STORY
               </p>
               <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#1C1917] uppercase mt-0.5">

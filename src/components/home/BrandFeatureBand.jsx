@@ -12,7 +12,7 @@ export default function BrandFeatureBand() {
   return (
     <section
       aria-labelledby="brand-band-heading"
-      className="w-full bg-[#0E7124] text-white overflow-hidden border-y border-[#0B5A1C]"
+      className="w-full bg-[#6B0808] text-white overflow-hidden border-y border-[#520505]"
       style={{
         backgroundImage:
           'linear-gradient(to right, rgba(255,255,255,0.065) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.065) 1px, transparent 1px)',
@@ -57,7 +57,7 @@ export default function BrandFeatureBand() {
             Discover the pure<br className="hidden sm:inline" /> taste of Kerala
           </h2>
 
-          <p className="text-[#BEF264] text-base sm:text-xl font-medium mt-3 leading-snug max-w-md">
+          <p className="text-[#FDE047] text-base sm:text-xl font-medium mt-3 leading-snug max-w-md">
             Spice up your life with handpicked quality homemade Kerala achar
           </p>
 
@@ -65,7 +65,7 @@ export default function BrandFeatureBand() {
             <button
               type="button"
               onClick={scrollToShop}
-              className="rounded-full bg-white hover:bg-[#EDF5EE] text-[#146B2E] px-6 py-2.5 sm:px-7 sm:py-3 text-xs sm:text-sm font-extrabold inline-flex items-center gap-2 shadow-md transition-all active:scale-95"
+              className="rounded-full bg-white hover:bg-[#FDF2F2] text-[#9B0B0B] px-6 py-2.5 sm:px-7 sm:py-3 text-xs sm:text-sm font-extrabold inline-flex items-center gap-2 shadow-md transition-all active:scale-95"
             >
               <span>Shop Fresh Jars</span>
               <ArrowRight className="w-4 h-4" />

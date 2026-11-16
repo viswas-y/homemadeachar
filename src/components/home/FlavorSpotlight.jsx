@@ -20,8 +20,8 @@ export default function FlavorSpotlight() {
           />
         </div>
 
-        {/* Right Panel: Botanical Soft Sage Feature Block */}
-        <div className="bg-[#E6F2E8] relative overflow-hidden flex flex-col justify-between min-h-[300px] sm:min-h-[340px] lg:min-h-[370px]">
+        {/* Right Panel: Botanical Soft Rose Cream Feature Block */}
+        <div className="bg-[#FDF2F0] relative overflow-hidden flex flex-col justify-between min-h-[300px] sm:min-h-[340px] lg:min-h-[370px]">
 
           {/* Desktop/Tablet Seamless Right-Anchored Bowl Photo */}
           <div
@@ -35,15 +35,15 @@ export default function FlavorSpotlight() {
               className="w-full h-full object-cover object-[85%_center]"
               draggable="false"
             />
-            {/* Soft left edge fade so image background melts seamlessly into #E6F2E8 */}
-            <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#E6F2E8] via-[#E6F2E8]/70 to-transparent" />
+            {/* Soft left edge fade so image background melts seamlessly into #FDF2F0 */}
+            <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#FDF2F0] via-[#FDF2F0]/70 to-transparent" />
           </div>
 
           {/* Hand-drawn Ink Starburst Ticks beside Bowl (Desktop/Tablet) */}
           <svg
             viewBox="0 0 42 70"
             aria-hidden="true"
-            className="hidden sm:block w-8 h-14 text-[#146B2E] absolute right-[43%] lg:right-[44%] top-12 z-10 pointer-events-none"
+            className="hidden sm:block w-8 h-14 text-[#9B0B0B] absolute right-[43%] lg:right-[44%] top-12 z-10 pointer-events-none"
           >
             <path
               d="M10 12 L28 24 M4 36 L24 36 M12 58 L28 48"
@@ -56,7 +56,7 @@ export default function FlavorSpotlight() {
 
           {/* Left Text & CTA Block */}
           <div className="relative z-20 p-7 sm:p-10 lg:p-12 sm:max-w-[58%]">
-            <p className="text-[11px] sm:text-xs uppercase tracking-widest font-extrabold text-[#146B2E]">
+            <p className="text-[11px] sm:text-xs uppercase tracking-widest font-extrabold text-[#9B0B0B]">
               NEW BATCH
             </p>
 
@@ -76,7 +76,7 @@ export default function FlavorSpotlight() {
             <div className="mt-5">
               <Link
                 to="/product/pacha-mulaku-achar"
-                className="rounded-full bg-[#16692B] hover:bg-[#115221] text-white px-7 py-3 text-xs sm:text-sm font-bold tracking-wide inline-flex items-center gap-2.5 shadow-sm transition-all active:scale-95"
+                className="rounded-full bg-[#960202] hover:bg-[#7F0B0B] text-white px-7 py-3 text-xs sm:text-sm font-bold tracking-wide inline-flex items-center gap-2.5 shadow-sm transition-all active:scale-95"
               >
                 <span>Shop now</span>
                 <ArrowRight className="w-4 h-4" />
@@ -93,7 +93,7 @@ export default function FlavorSpotlight() {
               className="w-full h-full object-cover object-[75%_center]"
               draggable="false"
             />
-            <div className="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-[#E6F2E8] to-transparent" />
+            <div className="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-[#FDF2F0] to-transparent" />
           </div>
 
         </div>

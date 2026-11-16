@@ -44,7 +44,7 @@ export const PRODUCTS = [
     malayalamName: "പച്ചമുളക് അച്ചാർ",
     tagline: "Fresh taste, whole green chillies",
     tag: "New",
-    boxColor: "bg-[#86EFAC]", // Sour cream green
+    boxColor: "bg-[#FECDD3]", // Rose red
     featured: true,
     veg: true,
     spiceLevel: "hot",
@@ -177,7 +177,7 @@ export const PRODUCTS = [
     malayalamName: "നെല്ലിക്ക അച്ചാർ",
     tagline: "Steamed gooseberry in yellow mustard oil",
     tag: "Healthy",
-    boxColor: "bg-[#BBF7D0]",
+    boxColor: "bg-[#FED7AA]",
     featured: true,
     veg: true,
     spiceLevel: "mild",

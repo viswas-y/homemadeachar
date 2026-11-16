@@ -36,7 +36,7 @@ function InkTicks({ position }) {
       <svg
         viewBox="0 0 36 36"
         aria-hidden="true"
-        className="w-7 h-7 text-[#146B2E] absolute -top-1 right-3 sm:right-2 pointer-events-none"
+        className="w-7 h-7 text-[#9B0B0B] absolute -top-1 right-3 sm:right-2 pointer-events-none"
       >
         <path
           d="M8 22 L15 10 M16 25 L26 17 M19 30 L30 28"
@@ -53,7 +53,7 @@ function InkTicks({ position }) {
     <svg
       viewBox="0 0 36 36"
       aria-hidden="true"
-      className="w-7 h-7 text-[#146B2E] absolute bottom-1 right-3 sm:right-2 pointer-events-none"
+      className="w-7 h-7 text-[#9B0B0B] absolute bottom-1 right-3 sm:right-2 pointer-events-none"
     >
       <path
         d="M8 8 L17 15 M12 18 L24 21 M14 27 L25 32"
@@ -96,7 +96,7 @@ export default function GoodIngredients() {
             <svg
               viewBox="0 0 260 18"
               aria-hidden="true"
-              className="w-56 sm:w-64 h-4 mt-2.5 mx-auto lg:mx-0 text-[#146B2E]"
+              className="w-56 sm:w-64 h-4 mt-2.5 mx-auto lg:mx-0 text-[#9B0B0B]"
             >
               <path
                 d="M4 11 C75 4, 175 4, 254 9"
@@ -137,12 +137,12 @@ export default function GoodIngredients() {
             ))}
           </div>
 
-          {/* Centered Forest Green Pill Button */}
+          {/* Centered Crimson Pill Button */}
           <div className="mt-8 sm:mt-10">
             <button
               type="button"
               onClick={scrollToAbout}
-              className="rounded-full bg-[#16692B] hover:bg-[#115221] text-white px-7 py-3 text-xs sm:text-sm font-bold tracking-wide inline-flex items-center gap-2.5 shadow-sm transition-all active:scale-95"
+              className="rounded-full bg-[#960202] hover:bg-[#7F0B0B] text-white px-7 py-3 text-xs sm:text-sm font-bold tracking-wide inline-flex items-center gap-2.5 shadow-sm transition-all active:scale-95"
             >
               <span>Learn more</span>
               <ArrowRight className="w-4 h-4" />

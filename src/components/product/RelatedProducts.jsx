@@ -11,7 +11,7 @@ export default function RelatedProducts({ currentProductId, products }) {
   return (
     <section className="pt-10">
       <div className="mb-6 text-center sm:text-left">
-        <p className="text-[11px] sm:text-xs uppercase tracking-widest font-extrabold text-[#146B2E]">
+        <p className="text-[11px] sm:text-xs uppercase tracking-widest font-extrabold text-[#9B0B0B]">
           RECOMMENDED
         </p>
         <h2 className="font-display text-2xl sm:text-3xl font-extrabold tracking-tight text-[#1C1917] uppercase mt-0.5">

@@ -14,10 +14,10 @@ export default function Hero() {
       className="px-2.5 sm:px-6 lg:px-8 pt-1.5 sm:pt-3"
     >
       <div
-        className="max-w-6xl mx-auto rounded-[24px] sm:rounded-[34px] px-4 py-6 sm:px-8 sm:py-9 lg:px-10 lg:py-10 relative overflow-hidden shadow-xl border border-[#14532D]"
+        className="max-w-6xl mx-auto rounded-[24px] sm:rounded-[34px] px-4 py-6 sm:px-8 sm:py-9 lg:px-10 lg:py-10 relative overflow-hidden shadow-xl border border-[#520505]"
         style={{
           background:
-            'radial-gradient(circle at 50% 42%, #0E3F20 0%, #072411 65%, #04170B 100%)',
+            'radial-gradient(circle at 50% 42%, #5C0707 0%, #280404 65%, #180202 100%)',
         }}
       >
         {/* Subtle Editorial Grid Texture */}
@@ -33,7 +33,7 @@ export default function Hero() {
 
         {/* Compact Centered Brand Headline */}
         <div className="relative z-10 text-center max-w-2xl mx-auto space-y-1.5 sm:space-y-2 animate-hero-enter">
-          <p className="text-[9.5px] sm:text-[11px] uppercase tracking-[0.22em] font-extrabold text-[#BEF264]">
+          <p className="text-[9.5px] sm:text-[11px] uppercase tracking-[0.22em] font-extrabold text-[#FDE047]">
             SPICE UP YOUR LIFE • HANDPICKED QUALITY
           </p>
 
@@ -46,7 +46,7 @@ export default function Hero() {
             <button
               type="button"
               onClick={scrollToShop}
-              className="ml-1.5 text-[#BEF264] hover:underline font-bold focus-visible:outline-none rounded"
+              className="ml-1.5 text-[#FDE047] hover:underline font-bold focus-visible:outline-none rounded"
             >
               Browse all jars →
             </button>

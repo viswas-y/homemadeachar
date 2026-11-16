@@ -6,24 +6,24 @@ import { formatINR } from '../../utils/currency.js';
 const FLAVOR_THEMES = {
   'manga-achar': {
     shortName: 'Mango Pickle',
-    accentHex: '#FDBA74',
-    glowHex: 'rgba(251, 146, 60, 0.36)',
+    accentHex: '#F59E0B',
+    glowHex: 'rgba(245, 158, 11, 0.40)',
     calloutLeft: 'Cold-Pressed Gingelly Oil',
     calloutRight: 'Bold Raw Mango • 9 Mo Shelf',
     variant: 'mango',
   },
   'pacha-mulaku-achar': {
     shortName: 'Green Chilli',
-    accentHex: '#86EFAC',
-    glowHex: 'rgba(34, 197, 94, 0.36)',
+    accentHex: '#EF4444',
+    glowHex: 'rgba(239, 68, 68, 0.40)',
     calloutLeft: 'Farm-Fresh Chillies',
     calloutRight: 'Cracked Mustard • Zero Chemicals',
     variant: 'chilli',
   },
   'veluthulli-achar': {
     shortName: 'Garlic Pickle',
-    accentHex: '#FDA4AF',
-    glowHex: 'rgba(244, 63, 94, 0.36)',
+    accentHex: '#FBBF24',
+    glowHex: 'rgba(251, 191, 36, 0.40)',
     calloutLeft: 'Whole Peeled Cloves',
     calloutRight: 'Fiery Kashmiri Chilli Masala',
     variant: 'garlic',
@@ -31,39 +31,39 @@ const FLAVOR_THEMES = {
   'naranga-achar': {
     shortName: 'Lemon Pickle',
     accentHex: '#FDE047',
-    glowHex: 'rgba(234, 179, 8, 0.34)',
+    glowHex: 'rgba(253, 224, 71, 0.38)',
     calloutLeft: 'Sun-Aged Wild Lemon',
     calloutRight: '12 Months Natural Cure',
     variant: 'lemon',
   },
   kadumanga: {
     shortName: 'Kadumanga',
-    accentHex: '#FCA5A5',
-    glowHex: 'rgba(239, 68, 68, 0.36)',
+    accentHex: '#DC2626',
+    glowHex: 'rgba(220, 38, 38, 0.42)',
     calloutLeft: 'Tender Baby Mangoes',
     calloutRight: 'Traditional Scarlet Brine',
     variant: 'kadumanga',
   },
   'nellika-achar': {
     shortName: 'Nellika Achar',
-    accentHex: '#BEF264',
-    glowHex: 'rgba(132, 204, 22, 0.36)',
+    accentHex: '#F59E0B',
+    glowHex: 'rgba(245, 158, 11, 0.38)',
     calloutLeft: 'Rich Vitamin-C Amla',
     calloutRight: 'Golden Turmeric & Mustard',
     variant: 'nellika',
   },
   'inji-achar-puli-inji': {
     shortName: 'Inji Achar',
-    accentHex: '#FB923C',
-    glowHex: 'rgba(234, 88, 12, 0.36)',
+    accentHex: '#EA580C',
+    glowHex: 'rgba(234, 88, 12, 0.40)',
     calloutLeft: 'Malabar Tamarind',
     calloutRight: 'Marayoor Organic Jaggery',
     variant: 'ginger',
   },
   'chemmeen-achar': {
     shortName: 'Chemmeen Achar',
-    accentHex: '#F87171',
-    glowHex: 'rgba(220, 38, 38, 0.38)',
+    accentHex: '#B91C1C',
+    glowHex: 'rgba(185, 28, 28, 0.45)',
     calloutLeft: 'Crispy Coastal Prawns',
     calloutRight: 'Roasted Curry Leaf Masala',
     variant: 'prawn',
@@ -72,8 +72,8 @@ const FLAVOR_THEMES = {
 
 const DEFAULT_THEME = {
   shortName: 'Kerala Achar',
-  accentHex: '#BEF264',
-  glowHex: 'rgba(132, 204, 22, 0.32)',
+  accentHex: '#F59E0B',
+  glowHex: 'rgba(245, 158, 11, 0.38)',
   calloutLeft: 'Cold-Pressed Gingelly Oil',
   calloutRight: 'Zero Preservatives',
   variant: 'mango',
@@ -84,9 +84,9 @@ function SpiceArtwork({ variant }) {
     case 'chilli':
       return (
         <svg viewBox="0 0 64 64" className="w-full h-full drop-shadow-[0_10px_14px_rgba(0,0,0,0.45)]" aria-hidden="true">
-          <path d="M48 10c-2 2-5 3-7 3" stroke="#A3E635" strokeWidth="3.5" strokeLinecap="round" fill="none" />
-          <path d="M43 13C30 14 16 26 11 47c-1 4 3 6 7 3 13-9 25-21 28-33 1-3-1-5-3-4z" fill="#22C55E" />
-          <path d="M42 16c-9 3-20 14-26 30 10-7 21-18 26-30z" fill="#86EFAC" opacity="0.45" />
+          <path d="M48 10c-2 2-5 3-7 3" stroke="#F59E0B" strokeWidth="3.5" strokeLinecap="round" fill="none" />
+          <path d="M43 13C30 14 16 26 11 47c-1 4 3 6 7 3 13-9 25-21 28-33 1-3-1-5-3-4z" fill="#DC2626" />
+          <path d="M42 16c-9 3-20 14-26 30 10-7 21-18 26-30z" fill="#F87171" opacity="0.45" />
         </svg>
       );
     case 'garlic':
@@ -109,17 +109,17 @@ function SpiceArtwork({ variant }) {
     case 'kadumanga':
       return (
         <svg viewBox="0 0 64 64" className="w-full h-full drop-shadow-[0_10px_14px_rgba(0,0,0,0.45)]" aria-hidden="true">
-          <path d="M34 10c11 1 18 11 17 24-1 13-11 21-22 19-10-2-15-11-12-23 3-11 8-21 17-20z" fill="#65A30D" />
+          <path d="M34 10c11 1 18 11 17 24-1 13-11 21-22 19-10-2-15-11-12-23 3-11 8-21 17-20z" fill="#B91C1C" />
           <path d="M40 16c6 5 8 15 5 24-2 6-7 10-12 11 6-5 10-16 7-35z" fill="#EF4444" opacity="0.65" />
-          <path d="M33 10c0-3 2-5 5-6" stroke="#A3E635" strokeWidth="3" strokeLinecap="round" fill="none" />
+          <path d="M33 10c0-3 2-5 5-6" stroke="#F59E0B" strokeWidth="3" strokeLinecap="round" fill="none" />
         </svg>
       );
     case 'nellika':
       return (
         <svg viewBox="0 0 64 64" className="w-full h-full drop-shadow-[0_10px_14px_rgba(0,0,0,0.45)]" aria-hidden="true">
-          <circle cx="32" cy="34" r="19" fill="#84CC16" />
-          <ellipse cx="26" cy="28" rx="6" ry="9" fill="#BEF264" opacity="0.55" />
-          <path d="M32 15v38M22 18c-3 10-3 22 0 32M42 18c3 10 3 22 0 32" stroke="#4D7C0F" strokeWidth="1.5" fill="none" opacity="0.55" />
+          <circle cx="32" cy="34" r="19" fill="#D97706" />
+          <ellipse cx="26" cy="28" rx="6" ry="9" fill="#FDE68A" opacity="0.55" />
+          <path d="M32 15v38M22 18c-3 10-3 22 0 32M42 18c3 10 3 22 0 32" stroke="#92400E" strokeWidth="1.5" fill="none" opacity="0.55" />
         </svg>
       );
     case 'ginger':
@@ -139,7 +139,7 @@ function SpiceArtwork({ variant }) {
     case 'redchilli':
       return (
         <svg viewBox="0 0 64 64" className="w-full h-full drop-shadow-[0_10px_14px_rgba(0,0,0,0.45)]" aria-hidden="true">
-          <path d="M16 14c3 1 6 1 8-1" stroke="#84CC16" strokeWidth="3.5" strokeLinecap="round" fill="none" />
+          <path d="M16 14c3 1 6 1 8-1" stroke="#F59E0B" strokeWidth="3.5" strokeLinecap="round" fill="none" />
           <path d="M22 14c12 2 24 14 29 33 1 4-3 6-7 3C32 41 21 29 18 17c-1-3 1-4 4-3z" fill="#EF4444" />
           <path d="M24 18c8 4 17 15 21 28-8-7-17-17-21-28z" fill="#FCA5A5" opacity="0.4" />
         </svg>
@@ -147,20 +147,20 @@ function SpiceArtwork({ variant }) {
     case 'curryleaf':
       return (
         <svg viewBox="0 0 64 64" className="w-full h-full drop-shadow-[0_10px_14px_rgba(0,0,0,0.45)]" aria-hidden="true">
-          <path d="M14 48L48 14" stroke="#A3E635" strokeWidth="2.5" strokeLinecap="round" />
-          <ellipse cx="26" cy="26" rx="7" ry="4" transform="rotate(-35 26 26)" fill="#22C55E" />
-          <ellipse cx="36" cy="20" rx="6" ry="3.5" transform="rotate(-30 36 20)" fill="#4ADE80" />
-          <ellipse cx="38" cy="36" rx="7" ry="4" transform="rotate(45 38 36)" fill="#16A34A" />
-          <ellipse cx="28" cy="44" rx="6" ry="3.5" transform="rotate(40 28 44)" fill="#22C55E" />
+          <path d="M14 48L48 14" stroke="#D97706" strokeWidth="2.5" strokeLinecap="round" />
+          <ellipse cx="26" cy="26" rx="7" ry="4" transform="rotate(-35 26 26)" fill="#B45309" />
+          <ellipse cx="36" cy="20" rx="6" ry="3.5" transform="rotate(-30 36 20)" fill="#D97706" />
+          <ellipse cx="38" cy="36" rx="7" ry="4" transform="rotate(45 38 36)" fill="#92400E" />
+          <ellipse cx="28" cy="44" rx="6" ry="3.5" transform="rotate(40 28 44)" fill="#B45309" />
         </svg>
       );
     case 'mango':
     default:
       return (
         <svg viewBox="0 0 64 64" className="w-full h-full drop-shadow-[0_10px_14px_rgba(0,0,0,0.45)]" aria-hidden="true">
-          <path d="M38 10c11 2 17 14 13 27-4 13-15 20-26 16-9-3-13-14-8-26C21 15 29 8 38 10z" fill="#84CC16" />
+          <path d="M38 10c11 2 17 14 13 27-4 13-15 20-26 16-9-3-13-14-8-26C21 15 29 8 38 10z" fill="#D97706" />
           <path d="M36 14c7 3 11 12 8 22-3 9-10 14-18 12 8-4 12-16 10-34z" fill="#F97316" opacity="0.72" />
-          <path d="M38 10c2-3 5-5 8-5" stroke="#4ADE80" strokeWidth="3" strokeLinecap="round" fill="none" />
+          <path d="M38 10c2-3 5-5 8-5" stroke="#FBBF24" strokeWidth="3" strokeLinecap="round" fill="none" />
         </svg>
       );
   }
@@ -305,7 +305,7 @@ export default function Carousel({ products = [], activeIndex: controlledIndex, 
 
         {/* Left & Right Tilted Feature Callout Pills (Desktop & Tablet) */}
         <div
-          className="hidden sm:flex absolute left-2 md:left-4 lg:left-6 top-[48%] -translate-y-1/2 z-20 items-center gap-2 rounded-full bg-[#092914]/85 backdrop-blur-md border border-white/15 px-3.5 py-1.5 text-xs font-bold text-white shadow-xl -rotate-3 animate-spice-float-a pointer-events-none"
+          className="hidden sm:flex absolute left-2 md:left-4 lg:left-6 top-[48%] -translate-y-1/2 z-20 items-center gap-2 rounded-full bg-[#2B0404]/90 backdrop-blur-md border border-white/15 px-3.5 py-1.5 text-xs font-bold text-white shadow-xl -rotate-3 animate-spice-float-a pointer-events-none"
         >
           <span
             className="w-2 h-2 rounded-full shrink-0"
@@ -315,7 +315,7 @@ export default function Carousel({ products = [], activeIndex: controlledIndex, 
         </div>
 
         <div
-          className="hidden sm:flex absolute right-2 md:right-4 lg:right-6 top-[43%] -translate-y-1/2 z-20 items-center gap-2 rounded-full bg-[#092914]/85 backdrop-blur-md border border-white/15 px-3.5 py-1.5 text-xs font-bold text-white shadow-xl rotate-3 animate-spice-float-b pointer-events-none"
+          className="hidden sm:flex absolute right-2 md:right-4 lg:right-6 top-[43%] -translate-y-1/2 z-20 items-center gap-2 rounded-full bg-[#2B0404]/90 backdrop-blur-md border border-white/15 px-3.5 py-1.5 text-xs font-bold text-white shadow-xl rotate-3 animate-spice-float-b pointer-events-none"
         >
           <span
             className="w-2 h-2 rounded-full shrink-0"
@@ -363,11 +363,11 @@ export default function Carousel({ products = [], activeIndex: controlledIndex, 
 
       {/* Compact Tilted Callout Pills on Mobile (overlap-free below jar) */}
       <div className="flex sm:hidden flex-wrap items-center justify-center gap-2 -mt-2 mb-3 z-10">
-        <span className="inline-flex items-center gap-1.5 rounded-full bg-[#092914]/90 border border-white/15 px-3 py-1 text-[10px] font-bold text-white shadow-md -rotate-2">
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-[#2B0404]/90 border border-white/15 px-3 py-1 text-[10px] font-bold text-white shadow-md -rotate-2">
           <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: theme.accentHex }} />
           <span>{theme.calloutLeft}</span>
         </span>
-        <span className="inline-flex items-center gap-1.5 rounded-full bg-[#092914]/90 border border-white/15 px-3 py-1 text-[10px] font-bold text-white shadow-md rotate-2">
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-[#2B0404]/90 border border-white/15 px-3 py-1 text-[10px] font-bold text-white shadow-md rotate-2">
           <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: theme.accentHex }} />
           <span>{theme.calloutRight}</span>
         </span>
@@ -398,7 +398,7 @@ export default function Carousel({ products = [], activeIndex: controlledIndex, 
                 onClick={() => handleSelect(idx)}
                 className={`rounded-full px-3 py-1.5 sm:px-4 sm:py-2 inline-flex items-center gap-1.5 sm:gap-2 text-[11px] sm:text-xs font-bold transition-all duration-300 active:scale-95 ${
                   isActive
-                    ? 'text-[#072411] scale-[1.03]'
+                    ? 'text-[#240202] scale-[1.03]'
                     : 'bg-white/5 hover:bg-white/12 text-white/90 border border-white/15'
                 }`}
                 style={
@@ -413,7 +413,7 @@ export default function Carousel({ products = [], activeIndex: controlledIndex, 
                 <span
                   className="w-2 h-2 rounded-full shrink-0"
                   style={{
-                    backgroundColor: isActive ? '#072411' : itemTheme.accentHex,
+                    backgroundColor: isActive ? '#240202' : itemTheme.accentHex,
                   }}
                 />
                 <span>{itemTheme.shortName}</span>
@@ -426,11 +426,11 @@ export default function Carousel({ products = [], activeIndex: controlledIndex, 
         <div className="pt-1 flex flex-wrap items-center justify-center gap-2.5">
           <Link
             to={`/product/${activeProduct.slug}`}
-            className="rounded-full bg-white hover:bg-[#EDF5EE] text-[#072411] px-4 py-2 sm:px-5 sm:py-2.5 inline-flex items-center gap-2 text-xs sm:text-sm font-extrabold shadow-lg transition-all active:scale-95 whitespace-nowrap"
+            className="rounded-full bg-white hover:bg-[#FDF2F2] text-[#240202] px-4 py-2 sm:px-5 sm:py-2.5 inline-flex items-center gap-2 text-xs sm:text-sm font-extrabold shadow-lg transition-all active:scale-95 whitespace-nowrap"
           >
             <span>Order {activeProduct.name}</span>
-            <span className="text-[#146B2E]">• From {formatINR(activeProduct.sizes[0].price)}</span>
-            <ArrowRight className="w-3.5 h-3.5 text-[#146B2E]" />
+            <span className="text-[#9B0B0B]">• From {formatINR(activeProduct.sizes[0].price)}</span>
+            <ArrowRight className="w-3.5 h-3.5 text-[#9B0B0B]" />
           </Link>
         </div>
       </div>

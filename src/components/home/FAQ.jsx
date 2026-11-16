@@ -15,7 +15,7 @@ export default function FAQ() {
         
         {/* Section Header */}
         <div className="text-center max-w-xl mx-auto mb-8 sm:mb-12">
-          <p className="text-[11px] sm:text-xs uppercase tracking-widest font-extrabold text-[#146B2E]">
+          <p className="text-[11px] sm:text-xs uppercase tracking-widest font-extrabold text-[#9B0B0B]">
             COMMON QUESTIONS
           </p>
           <h2 className="font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-[#1C1917] uppercase mt-0.5">
@@ -52,7 +52,7 @@ export default function FAQ() {
                       )}
                     </div>
 
-                    <span className="w-8 h-8 rounded-full bg-[#EDF5EE] border border-[#146B2E]/20 flex items-center justify-center flex-shrink-0 text-[#146B2E]">
+                    <span className="w-8 h-8 rounded-full bg-[#FDF2F2] border border-[#9B0B0B]/20 flex items-center justify-center flex-shrink-0 text-[#9B0B0B]">
                       {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                     </span>
                   </button>

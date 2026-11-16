@@ -45,7 +45,7 @@ export default function ProductPage() {
         <p className="mt-2 text-sm text-[#1C1917]/70">The product you are looking for is unavailable.</p>
         <Link
           to="/"
-          className="mt-6 rounded-full bg-[#16692B] hover:bg-[#115221] text-white px-6 py-2.5 text-xs font-bold tracking-wide"
+          className="mt-6 rounded-full bg-[#960202] hover:bg-[#7F0B0B] text-white px-6 py-2.5 text-xs font-bold tracking-wide"
         >
           Return to Home
         </Link>
@@ -122,7 +122,7 @@ export default function ProductPage() {
                       aria-label={`View photo ${idx + 1}`}
                       className={`w-16 h-16 rounded-xl overflow-hidden border-2 transition-all ${
                         idx === selectedImageIndex
-                          ? 'border-[#146B2E] ring-2 ring-[#146B2E]'
+                          ? 'border-[#9B0B0B] ring-2 ring-[#9B0B0B]'
                           : 'border-white/50 opacity-70 hover:opacity-100'
                       }`}
                     >
@@ -137,7 +137,7 @@ export default function ProductPage() {
             <div className="lg:col-span-6 space-y-5">
 
               <div>
-                <span className="text-xs font-bold text-[#146B2E] uppercase tracking-widest block">
+                <span className="text-xs font-bold text-[#9B0B0B] uppercase tracking-widest block">
                   {product.malayalamName}
                 </span>
                 <h1 className="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-[#1C1917] uppercase mt-1 leading-tight">
@@ -173,8 +173,8 @@ export default function ProductPage() {
                         onClick={() => setSelectedSize(s)}
                         className={`rounded-full px-5 py-2 text-xs font-extrabold tracking-wide border transition-all ${
                           isSelected
-                            ? 'bg-[#146B2E] text-white border-[#146B2E]'
-                            : 'bg-[#F7F7F5] text-[#1C1917] border-stone-200 hover:bg-[#EDF5EE] hover:border-[#146B2E]/40'
+                            ? 'bg-[#9B0B0B] text-white border-[#9B0B0B]'
+                            : 'bg-[#F7F7F5] text-[#1C1917] border-stone-200 hover:bg-[#FDF2F2] hover:border-[#9B0B0B]/40'
                         }`}
                       >
                         {s.size}
@@ -217,7 +217,7 @@ export default function ProductPage() {
                 <button
                   type="button"
                   onClick={handleAddToCart}
-                  className="w-full sm:w-auto rounded-full bg-[#16692B] hover:bg-[#115221] text-white px-8 py-3.5 text-xs font-bold tracking-wide transition-colors"
+                  className="w-full sm:w-auto rounded-full bg-[#960202] hover:bg-[#7F0B0B] text-white px-8 py-3.5 text-xs font-bold tracking-wide transition-colors"
                 >
                   Add to cart
                 </button>

@@ -60,8 +60,8 @@ export default function ImageGallery({ images, title }) {
               onClick={() => setActiveImageIndex(idx)}
               className={`relative aspect-square rounded-xl p-2 bg-[#ECECE8] border-2 overflow-hidden transition-all duration-200 ${
                 idx === activeImageIndex
-                  ? 'border-[#146B2E] shadow-md ring-2 ring-[#146B2E]/25'
-                  : 'border-stone-200 hover:border-[#146B2E]/50 opacity-75 hover:opacity-100'
+                  ? 'border-[#9B0B0B] shadow-md ring-2 ring-[#9B0B0B]/25'
+                  : 'border-stone-200 hover:border-[#9B0B0B]/50 opacity-75 hover:opacity-100'
               }`}
             >
               <img

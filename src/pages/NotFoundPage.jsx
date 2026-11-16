@@ -11,7 +11,7 @@ export default function NotFoundPage() {
   return (
     <div className="min-h-[70vh] flex items-center justify-center py-20 px-4 bg-[#F7F7F5]">
       <div className="max-w-md w-full text-center space-y-4 bg-white p-10 rounded-3xl border border-stone-200 shadow-xs">
-        <span className="font-display text-xs font-extrabold text-[#146B2E] uppercase tracking-widest">
+        <span className="font-display text-xs font-extrabold text-[#9B0B0B] uppercase tracking-widest">
           404 Error
         </span>
         <h1 className="font-display text-3xl font-extrabold text-[#1C1917]">
@@ -24,7 +24,7 @@ export default function NotFoundPage() {
         <div className="pt-2">
           <Link
             to="/"
-            className="inline-block rounded-full bg-[#16692B] hover:bg-[#115221] text-white px-7 py-3 text-xs font-bold tracking-wide transition-colors shadow-xs"
+            className="inline-block rounded-full bg-[#960202] hover:bg-[#7F0B0B] text-white px-7 py-3 text-xs font-bold tracking-wide transition-colors shadow-xs"
           >
             Return to Home
           </Link>

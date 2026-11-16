@@ -98,7 +98,7 @@ export default function CartPage() {
         </div>
 
         {cart.length === 0 && !orderSent ? (
-          <div className="rounded-[28px] sm:rounded-[36px] bg-[#EDF5EE] border border-[#146B2E]/20 p-12 sm:p-16 text-center max-w-lg mx-auto shadow-xs my-8 space-y-4">
+          <div className="rounded-[28px] sm:rounded-[36px] bg-[#FDF2F2] border border-[#9B0B0B]/20 p-12 sm:p-16 text-center max-w-lg mx-auto shadow-xs my-8 space-y-4">
             <h2 className="font-display text-3xl font-extrabold text-[#1C1917] uppercase">
               Your cart is empty
             </h2>
@@ -107,19 +107,19 @@ export default function CartPage() {
             </p>
             <Link
               to="/#products"
-              className="inline-block rounded-full bg-[#16692B] hover:bg-[#115221] text-white px-7 py-3 text-xs font-extrabold uppercase tracking-wide transition-colors"
+              className="inline-block rounded-full bg-[#960202] hover:bg-[#7F0B0B] text-white px-7 py-3 text-xs font-extrabold uppercase tracking-wide transition-colors"
             >
               Explore Pickles
             </Link>
           </div>
         ) : orderSent ? (
-          <div className="rounded-[28px] sm:rounded-[36px] bg-[#EDF5EE] border border-[#146B2E]/20 p-10 sm:p-14 text-center max-w-lg mx-auto shadow-xs space-y-4">
-            <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center mx-auto text-[#1C1917]">
+          <div className="rounded-[28px] sm:rounded-[36px] bg-[#FDF2F2] border border-[#9B0B0B]/20 p-10 sm:p-14 text-center max-w-lg mx-auto shadow-xs space-y-4">
+            <div className="w-14 h-14 rounded-full bg-[#9B0B0B] text-white flex items-center justify-center mx-auto">
               <Check className="w-8 h-8 stroke-[3]" />
             </div>
 
             <div>
-              <span className="text-[11px] uppercase tracking-wider font-extrabold text-[#1C1917]/70 block">
+              <span className="text-[11px] uppercase tracking-wider font-extrabold text-[#9B0B0B] block">
                 ORDER DISPATCHED
               </span>
               <h2 className="font-display text-3xl font-extrabold text-[#1C1917] uppercase mt-1">
@@ -145,7 +145,7 @@ export default function CartPage() {
               <Link
                 to="/"
                 onClick={clearCart}
-                className="rounded-full bg-[#16692B] hover:bg-[#115221] text-white px-7 py-3 text-xs font-extrabold uppercase tracking-wide transition-colors"
+                className="rounded-full bg-[#960202] hover:bg-[#7F0B0B] text-white px-7 py-3 text-xs font-extrabold uppercase tracking-wide transition-colors"
               >
                 Back to Home
               </Link>
@@ -158,7 +158,7 @@ export default function CartPage() {
             <div className="lg:col-span-7 space-y-4">
               
               {/* Free delivery prompt */}
-              <div className="p-4 rounded-2xl bg-[#EDF5EE] border border-[#146B2E]/25 text-xs text-[#146B2E] font-bold flex items-center justify-between">
+              <div className="p-4 rounded-2xl bg-[#FDF2F2] border border-[#9B0B0B]/25 text-xs text-[#9B0B0B] font-bold flex items-center justify-between">
                 <span>
                   {remainingForFreeShipping === 0 ? (
                     'Your order qualifies for free delivery across India!'
@@ -352,7 +352,7 @@ export default function CartPage() {
 
                   <button
                     type="submit"
-                    className="w-full rounded-full bg-[#16692B] hover:bg-[#115221] text-white py-3.5 px-6 text-xs font-extrabold uppercase tracking-wide flex items-center justify-center gap-2 transition-colors mt-2 shadow-sm"
+                    className="w-full rounded-full bg-[#960202] hover:bg-[#7F0B0B] text-white py-3.5 px-6 text-xs font-extrabold uppercase tracking-wide flex items-center justify-center gap-2 transition-colors mt-2 shadow-sm"
                   >
                     <span>Place Order on WhatsApp</span>
                     <ArrowRight className="w-3.5 h-3.5" />

@@ -61,9 +61,9 @@ export default function Header() {
           isScrolled ? 'pt-2.5 sm:pt-3.5 px-3 sm:px-6' : 'p-0'
         }`}
       >
-        {/* Top Green Promo Strip: Visible flush at top, collapses smoothly on scroll */}
+        {/* Top Crimson Promo Strip: Visible flush at top, collapses smoothly on scroll */}
         <div
-          className={`bg-[#146B2E] text-white overflow-hidden transition-all duration-300 ${
+          className={`bg-[#9B0B0B] text-white overflow-hidden transition-all duration-300 ${
             isScrolled ? 'max-h-0 opacity-0' : 'max-h-9 opacity-100'
           }`}
         >
@@ -103,35 +103,35 @@ export default function Header() {
               <button
                 type="button"
                 onClick={() => handleNavClick('shop')}
-                className="hover:text-[#146B2E] transition-colors py-1"
+                className="hover:text-[#9B0B0B] transition-colors py-1"
               >
                 Pickles
               </button>
               <button
                 type="button"
                 onClick={() => handleNavClick('ingredients')}
-                className="hover:text-[#146B2E] transition-colors py-1"
+                className="hover:text-[#9B0B0B] transition-colors py-1"
               >
                 Ingredients
               </button>
               <button
                 type="button"
                 onClick={() => handleNavClick('gallery')}
-                className="hover:text-[#146B2E] transition-colors py-1"
+                className="hover:text-[#9B0B0B] transition-colors py-1"
               >
                 Kitchen
               </button>
               <button
                 type="button"
                 onClick={() => handleNavClick('about')}
-                className="hover:text-[#146B2E] transition-colors py-1"
+                className="hover:text-[#9B0B0B] transition-colors py-1"
               >
                 Our Story
               </button>
               <button
                 type="button"
                 onClick={() => handleNavClick('faq')}
-                className="hover:text-[#146B2E] transition-colors py-1"
+                className="hover:text-[#9B0B0B] transition-colors py-1"
               >
                 FAQ
               </button>
@@ -143,7 +143,7 @@ export default function Header() {
                 href={SHOP_CONFIG.socials.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 text-[#1C1917] hover:text-[#146B2E] hover:bg-[#EDF5EE] rounded-full transition-colors"
+                className="p-2 text-[#1C1917] hover:text-[#9B0B0B] hover:bg-[#FDF2F2] rounded-full transition-colors"
                 aria-label="Order or Chat on WhatsApp"
               >
                 <MessageCircle className="w-5 h-5" />
@@ -152,12 +152,12 @@ export default function Header() {
               <button
                 type="button"
                 onClick={() => setIsCartOpen(true)}
-                className="relative p-2 text-[#1C1917] hover:text-[#146B2E] hover:bg-[#EDF5EE] rounded-full transition-colors"
+                className="relative p-2 text-[#1C1917] hover:text-[#9B0B0B] hover:bg-[#FDF2F2] rounded-full transition-colors"
                 aria-label={`Shopping bag with ${totalItems} items`}
               >
                 <ShoppingBag className="w-5 h-5" />
                 {totalItems > 0 && (
-                  <span className="absolute -top-0.5 -right-0.5 min-w-[18px] h-[18px] px-1 rounded-full bg-[#146B2E] text-white font-bold text-[10px] flex items-center justify-center border border-white shadow-xs">
+                  <span className="absolute -top-0.5 -right-0.5 min-w-[18px] h-[18px] px-1 rounded-full bg-[#9B0B0B] text-white font-bold text-[10px] flex items-center justify-center border border-white shadow-xs">
                     {totalItems}
                   </span>
                 )}
@@ -166,7 +166,7 @@ export default function Header() {
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="md:hidden p-2 text-[#1C1917] hover:text-[#146B2E] hover:bg-[#EDF5EE] rounded-full transition-colors"
+                className="md:hidden p-2 text-[#1C1917] hover:text-[#9B0B0B] hover:bg-[#FDF2F2] rounded-full transition-colors"
                 aria-label="Toggle Menu"
                 aria-expanded={mobileMenuOpen}
               >
@@ -186,45 +186,45 @@ export default function Header() {
             <button
               type="button"
               onClick={() => handleNavClick('shop')}
-              className="text-left py-2.5 px-3 hover:bg-[#EDF5EE] hover:text-[#146B2E] rounded-xl transition-colors"
+              className="text-left py-2.5 px-3 hover:bg-[#FDF2F2] hover:text-[#9B0B0B] rounded-xl transition-colors"
             >
               Our Pickles
             </button>
             <button
               type="button"
               onClick={() => handleNavClick('ingredients')}
-              className="text-left py-2.5 px-3 hover:bg-[#EDF5EE] hover:text-[#146B2E] rounded-xl transition-colors"
+              className="text-left py-2.5 px-3 hover:bg-[#FDF2F2] hover:text-[#9B0B0B] rounded-xl transition-colors"
             >
               Pure Ingredients
             </button>
             <button
               type="button"
               onClick={() => handleNavClick('gallery')}
-              className="text-left py-2.5 px-3 hover:bg-[#EDF5EE] hover:text-[#146B2E] rounded-xl transition-colors"
+              className="text-left py-2.5 px-3 hover:bg-[#FDF2F2] hover:text-[#9B0B0B] rounded-xl transition-colors"
             >
               Kitchen Gallery
             </button>
             <button
               type="button"
               onClick={() => handleNavClick('about')}
-              className="text-left py-2.5 px-3 hover:bg-[#EDF5EE] hover:text-[#146B2E] rounded-xl transition-colors"
+              className="text-left py-2.5 px-3 hover:bg-[#FDF2F2] hover:text-[#9B0B0B] rounded-xl transition-colors"
             >
               Our Story
             </button>
             <button
               type="button"
               onClick={() => handleNavClick('faq')}
-              className="text-left py-2.5 px-3 hover:bg-[#EDF5EE] hover:text-[#146B2E] rounded-xl transition-colors"
+              className="text-left py-2.5 px-3 hover:bg-[#FDF2F2] hover:text-[#9B0B0B] rounded-xl transition-colors"
             >
               Common Questions
             </button>
             <Link
               to="/cart"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-left py-2.5 px-3 hover:bg-[#EDF5EE] hover:text-[#146B2E] rounded-xl transition-colors flex items-center justify-between"
+              className="text-left py-2.5 px-3 hover:bg-[#FDF2F2] hover:text-[#9B0B0B] rounded-xl transition-colors flex items-center justify-between"
             >
               <span>Shopping Bag</span>
-              <span className="bg-[#146B2E] text-white px-2.5 py-0.5 rounded-full text-xs">
+              <span className="bg-[#9B0B0B] text-white px-2.5 py-0.5 rounded-full text-xs">
                 {totalItems}
               </span>
             </Link>

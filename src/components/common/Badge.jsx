@@ -43,7 +43,7 @@ export function SpiceBadge({ level, showLabel = true, className = "" }) {
     ? 'text-red-700 bg-red-50 border-red-200' 
     : level === 'medium' 
       ? 'text-amber-700 bg-amber-50 border-amber-200' 
-      : 'text-[#146B2E] bg-[#EDF5EE] border-[#146B2E]/25';
+      : 'text-[#9B0B0B] bg-[#FDF2F2] border-[#9B0B0B]/25';
 
   return (
     <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-bold border ${colorClass} ${className}`}>
