@@ -17,7 +17,7 @@ export default function ProductGrid({ products = [] }) {
     <section
       id="shop"
       aria-labelledby="shop-heading"
-      className="w-full bg-white py-12 sm:py-16 px-4 sm:px-8 border-b border-stone-200/70"
+      className="w-full bg-[#FAF7F2] py-12 sm:py-16 px-4 sm:px-8 border-b border-stone-200/70"
     >
       <div className="max-w-7xl mx-auto">
         {/* Clean Millnadan Header & Filter Bar */}
